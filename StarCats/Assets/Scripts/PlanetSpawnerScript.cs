@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetSpawnerScript : MonoBehaviour {
+public class PlanetSpawnerScript : MonoBehaviour
+{
 
 
-    public GameObject planet;
+	public GameObject planetA;
+	public GameObject planetB;
+	public GameObject planetC;
     float randX;
 	Vector2 whereToSpawn;
 	public float spawnRate = 2f;
@@ -24,7 +27,9 @@ public class PlanetSpawnerScript : MonoBehaviour {
 			nextSpawn = Time.time + spawnRate;
 			randX = Random.Range(-8.4f, 8.4f);
 			whereToSpawn = new Vector2(randX,transform.position.y);
-			Instantiate(planet, whereToSpawn, Quaternion.identity);
+			int choice = Random.Range(0, 3);
+			GameObject[] planetOptions = new GameObject[] {planetA, planetB, planetC};
+			Instantiate(planetOptions[choice], whereToSpawn, Quaternion.identity);
 
 		}
 	}
