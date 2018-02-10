@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23456292965457564}
   - component: {fileID: 61425965104289962}
   - component: {fileID: 50132208193460460}
-  m_Layer: 0
+  - component: {fileID: 114958870320725512}
+  m_Layer: 8
   m_Name: PlanetA
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -52,6 +53,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -67,6 +69,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -127,3 +130,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114958870320725512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443289283727702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061dd91d899eb49dc879d55a7ae091fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
