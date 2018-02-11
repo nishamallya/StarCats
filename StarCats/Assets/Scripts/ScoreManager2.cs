@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager2 : MonoBehaviour {
 
-	private static int storageB;
+	public static int storageB;
 	private static Text _BScore;
 		
 	// Use this for initialization
