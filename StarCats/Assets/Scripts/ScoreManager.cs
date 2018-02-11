@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
 
 	private static void UpdateScore()
 	{
-		_AScore.text = "Counter A: " + storageA;
+		_AScore.text = "Water: " + storageA;
 
 	}
 }
