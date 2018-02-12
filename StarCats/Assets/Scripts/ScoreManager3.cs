@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager3 : MonoBehaviour {
 
-	private static int storageC;
+	public static int storageC;
 	private static Text _CScore;
 		
 	// Use this for initialization
@@ -23,7 +23,7 @@ public class ScoreManager3 : MonoBehaviour {
 
 	private static void UpdateScore()
 	{
-		_CScore.text = "Counter C: " + storageC;
+		_CScore.text = "Fire: " + storageC;
 
 	}
 }
