@@ -12,7 +12,7 @@ public class PlanetSpawnerScript : MonoBehaviour
 	public GameObject enemies;
 	public float randX;
 	Vector2 whereToSpawn;
-	public float spawnRate = 1.5f;
+	public float spawnRate = 10f;
 	float nextSpawn = 0.0f;
 	
 	
@@ -30,8 +30,8 @@ public class PlanetSpawnerScript : MonoBehaviour
 			nextSpawn = Time.fixedTime + spawnRate;
 			whereToSpawn = new Vector2(randX,transform.position.y);
 			randX = Random.Range(-8.4f, 8.4f);
-			int choice = Random.Range(0, 6);
-			GameObject[] planetOptions = new GameObject[] {planetA, planetA, planetB, planetC, enemies, enemies};
+			int choice = Random.Range(0, 8);
+			GameObject[] planetOptions = new GameObject[] {planetA,planetA, enemies, planetB, planetC, enemies, enemies, planetB};
 			Instantiate(planetOptions[choice], whereToSpawn, Quaternion.identity);
 			
 			
