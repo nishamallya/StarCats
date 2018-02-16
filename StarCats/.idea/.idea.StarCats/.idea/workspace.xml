@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlanetA.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlanetA.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <marker date="1518309156000" expanded="false" signature="6:78" ph="..." />
                 <marker date="1518309156000" expanded="true" signature="117:557" ph="{...}" />
@@ -114,15 +114,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Boundary.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Boundary.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Boundary.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="120" lean-forward="false" selection-start-line="18" selection-start-column="120" selection-end-line="18" selection-end-column="120" />
+            <state relative-caret-position="330">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
-                <marker date="1518766034000" expanded="false" signature="6:131" ph="..." />
-                <marker date="1518766034000" expanded="true" signature="171:899" ph="{...}" />
-                <marker date="1518766034000" expanded="true" signature="412:895" ph="{...}" />
+                <marker date="1518766947000" expanded="false" signature="6:131" ph="..." />
+                <marker date="1518766947000" expanded="true" signature="171:899" ph="{...}" />
+                <marker date="1518766947000" expanded="true" signature="412:895" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -157,9 +157,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreManager3.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetSpawnerScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Boundary.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetA.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Boundary.cs" />
       </list>
     </option>
   </component>
@@ -269,12 +269,12 @@
       <workItem from="1518320355122" duration="1780000" />
       <workItem from="1518475919236" duration="763000" />
       <workItem from="1518745336840" duration="1092000" />
-      <workItem from="1518748817693" duration="3228000" />
+      <workItem from="1518748817693" duration="3578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12583000" />
+    <option name="totallyTimeSpent" value="12933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,22 +798,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Boundary.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="120" lean-forward="false" selection-start-line="18" selection-start-column="120" selection-end-line="18" selection-end-column="120" />
-          <folding>
-            <marker date="1518766034000" expanded="false" signature="6:131" ph="..." />
-            <marker date="1518766034000" expanded="true" signature="171:899" ph="{...}" />
-            <marker date="1518766034000" expanded="true" signature="412:895" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <marker date="1518309156000" expanded="false" signature="6:78" ph="..." />
             <marker date="1518309156000" expanded="true" signature="117:557" ph="{...}" />
@@ -823,6 +811,18 @@
             <marker date="1518309156000" expanded="true" signature="333:555" ph="{...}" />
             <marker date="1518309156000" expanded="true" signature="377:552" ph="{...}" />
             <marker date="1518309156000" expanded="true" signature="482:547" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Boundary.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <marker date="1518766947000" expanded="false" signature="6:131" ph="..." />
+            <marker date="1518766947000" expanded="true" signature="171:899" ph="{...}" />
+            <marker date="1518766947000" expanded="true" signature="412:895" ph="{...}" />
           </folding>
         </state>
       </provider>
