@@ -72,7 +72,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -108,11 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d204ff849fb434adb8daab6a37f52b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  maxBound: 10
-  minBound: -10
-  rb: {fileID: 0}
+  player: {fileID: 0}
+  speed: 15
+  maxBound: 0
+  minBound: 0
+  rb: {fileID: 50005862220799250}
   thrust: 0
+  cam: {fileID: 0}
 --- !u!212 &212125597699317016
 SpriteRenderer:
   m_ObjectHideFlags: 1

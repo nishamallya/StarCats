@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398884714624486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalPosition: {x: 0.09, y: 8.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,5 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e099b4ccd3744a1862ec8ecbfc8d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 1443289283727702, guid: 199278e2c2205407bb3d0f9f0e7ac2a2, type: 2}
+  planetA: {fileID: 1443289283727702, guid: 199278e2c2205407bb3d0f9f0e7ac2a2, type: 2}
+  planetB: {fileID: 1724975884135638, guid: e22bb66b3475e48a4955b3a62cbe7459, type: 2}
+  planetC: {fileID: 1019289814725510, guid: 523560ddbdc7c45afb51b4d845f2b82c, type: 2}
+  enemies: {fileID: 1147515598473504, guid: f3e49db6e72a947e596066d6cfa27e8a, type: 2}
+  randX: 0
   spawnRate: 2
