@@ -1,27 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class PlayerController : MonoBehaviour {
 
-    private Transform player;
+    public Transform player;
     public float speed;
 	public float maxBound, minBound;
 	public Rigidbody2D rb;
 	public float thrust;
+	public Camera cam;
 
 	// Use this for initialization
 	void Start ()
 	{
 		player = GetComponent<Transform>();
-		//rb = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody2D>();
+		maxBound = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x;
+		minBound = cam.ScreenToWorldPoint(new Vector2(0,0)).x;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		/*
-		if (Input.GetKey(KeyCode.RightArrow))
+	
+		float horizontal = Input.GetAxis("Horizontal");	
+		Vector2 movement = new Vector2(horizontal, 0.0f);
+		rb.velocity = movement * speed;
+
+		var pos = rb.position;
+		//rb.position = new Vector2(Mathf.Clamp(rb.position.x, minBound, maxBound), rb.position.y);
+
+		/*if (Input.GetKey(KeyCode.RightArrow))
 		{
 			rb.AddForce(new Vector2(5,0));
 		}
@@ -30,21 +41,23 @@ public class PlayerController : MonoBehaviour {
 		{
 			rb.AddForce(new Vector2(-5,0));
 		}
-		*/
-		/*
 		
-
-		if (player.position.x < minBound && h < 0)
-		{
-			h = 0;
-		}
-		else if (player.position.x > maxBound && h > 0)
-		{
-			h = 0;
-		}
 		*/
-		float h = Input.GetAxis("Horizontal"); //uses the A&D key
-		player.position += Vector3.right * h * speed;
+		if (pos.x < minBound + 1) //looping behavior, +-1 added to accomodate width of player object
+		{
+			pos.x = maxBound - 1;
+		}
+		if (pos.x > maxBound -1)
+		{
+			pos.x = minBound + 1;
+		}
+
+		rb.position = pos;
+		
+		//float h = Input.GetAxis("Horizontal"); //uses the A&D key
+		//player.position += Vector3.right * h * speed;
+		
+		
 
 	}
 }
