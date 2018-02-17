@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager3 : MonoBehaviour {
 
-	public static int storageC;
+	/*public static int storageC;
 	private static Text _CScore;
 		
 	// Use this for initialization
@@ -26,4 +26,5 @@ public class ScoreManager3 : MonoBehaviour {
 		_CScore.text = "Fire: " + storageC;
 
 	}
+	*/
 }

@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanetC : MonoBehaviour {
+public class PlanetC : MonoBehaviour
+{
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start()
+	{
+
 	}
-	
-	private void Update()
+
+	/*private void Update()
 	{
 		if (gameObject.transform.position.y < -8)
 		{
 			Destroy(gameObject);
 		}
 	}
-	
+*/
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.name == "Player")
@@ -25,8 +27,12 @@ public class PlanetC : MonoBehaviour {
 			if (Vector2.Dot(contact.normal, Vector2.up) > 0.5)
 			{
 				Destroy(gameObject);
-				ScoreManager3.AddScore(1);
+				ScoreManager.AddScore(1);
 			}
+		}
+		if (other.gameObject.GetComponent<BoxCollider2D>() != null)
+		{
+			Destroy(gameObject);
 		}
 	}
 }

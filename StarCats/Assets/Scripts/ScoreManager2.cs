@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager2 : MonoBehaviour {
 
-	public static int storageB;
+	/*public static int storageB;
 	private static Text _BScore;
 		
 	// Use this for initialization
@@ -26,4 +26,5 @@ public class ScoreManager2 : MonoBehaviour {
 		_BScore.text = "Earth: " + storageB;
 
 	}
+	*/
 }

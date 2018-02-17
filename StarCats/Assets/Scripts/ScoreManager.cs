@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
 
-	public static int storageA;
+	public static int storageA = 500;
 	private static Text _AScore;
 		
 	// Use this for initialization
@@ -23,9 +23,15 @@ public class ScoreManager : MonoBehaviour
 		UpdateScore();
 	}
 
-	private static void UpdateScore()
+	public int GetScore()
 	{
-		_AScore.text = "Water: " + storageA;
+		return storageA;
+	}
+	
+
+	public static void UpdateScore()
+	{
+		_AScore.text = "Points: " + storageA;
 
 	}
 }

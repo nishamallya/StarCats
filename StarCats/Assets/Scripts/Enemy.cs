@@ -9,13 +9,14 @@ public class Enemy : MonoBehaviour {
 		
 	}
 
-	private void Update()
+	/*private void Update()
 	{
 		if (gameObject.transform.position.y < -8)
 		{
 			Destroy(gameObject);
 		}
 	}
+	*/
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
@@ -29,7 +30,7 @@ public class Enemy : MonoBehaviour {
 				{
 					ScoreManager.AddScore((-1));
 				}
-				if (ScoreManager2.storageB > 0)
+				/*if (ScoreManager2.storageB > 0)
 				{
 					ScoreManager2.AddScore(-1);
 				}
@@ -37,9 +38,23 @@ public class Enemy : MonoBehaviour {
 				{
 					ScoreManager3.AddScore(-1);
 				}
-				
+				*/
+
+			}
+		}
+		if (other.gameObject.GetComponent<BoxCollider2D>()!= null)
+			{
+				Destroy(gameObject);
+				if (Health.healthcount > 0)
+				{
+					Health.AddHealth(-10);
+				}
+				if (ScoreManager.storageA > 0)
+				{
+					ScoreManager.AddScore(-1);
+				}
 			}
 
 		}
 	}
-}
+
