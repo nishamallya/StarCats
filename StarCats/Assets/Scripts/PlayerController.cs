@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
@@ -11,6 +13,10 @@ public class PlayerController : MonoBehaviour {
 	public Rigidbody2D rb;
 	public float thrust;
 	public Camera cam;
+	public GameObject trap;
+	public bool canSetTrap;
+	
+	
 
 	// Use this for initialization
 	void Start ()
@@ -19,12 +25,19 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		maxBound = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x;
 		minBound = cam.ScreenToWorldPoint(new Vector2(0,0)).x;
+		canSetTrap = true;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-	
+		if (Input.GetKeyDown("return") && canSetTrap == true)
+		{
+			Vector2 butt = new Vector2(0, 0);
+			Instantiate(trap,butt,Quaternion.identity);
+			canSetTrap = false;
+		}
+		
 		float horizontal = Input.GetAxis("Horizontal");	
 		Vector2 movement = new Vector2(horizontal, 0.0f);
 		rb.velocity = movement * speed;
