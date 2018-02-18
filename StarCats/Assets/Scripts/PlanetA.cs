@@ -47,6 +47,7 @@ public class PlanetA : MonoBehaviour {
 			ScoreManager.AddScore(1);
 	
 		}
+
 		
 		
 		if (other.gameObject.GetComponent<BoxCollider2D>() != null)

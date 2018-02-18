@@ -11,14 +11,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+            <state relative-caret-position="-1471">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1518989134866" expanded="false" signature="6:156" ph="..." />
+                <marker date="1518989134866" expanded="true" signature="6:156" ph="..." />
                 <marker date="1518989134866" expanded="true" signature="204:2690" ph="{...}" />
                 <marker date="1518989134866" expanded="true" signature="677:971" ph="{...}" />
                 <marker date="1518989134866" expanded="true" signature="1030:2150" ph="{...}" />
@@ -41,11 +41,63 @@
         </entry>
       </file>
       <file leaf-file-name="PlanetA.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/cs397/StarCats/StarCats/Assets/Scripts/PlanetA.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="419">
+              <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+              <folding>
+                <marker date="1518990784426" expanded="false" signature="6:78" ph="..." />
+                <marker date="1518990784426" expanded="true" signature="117:963" ph="{...}" />
+                <marker date="1518990784426" expanded="true" signature="167:174" ph="{...}" />
+                <marker date="1518990784426" expanded="true" signature="177:286" ph="/* private void Update() ... */" />
+                <marker date="1518990784426" expanded="true" signature="288:692" ph="/* private void OnCollisionEnter2D(Collision2D other) ... */" />
+                <marker date="1518990784426" expanded="true" signature="743:961" ph="{...}" />
+                <marker date="1518990784426" expanded="true" signature="790:854" ph="{...}" />
+                <marker date="1518990784426" expanded="true" signature="923:955" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trap.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="509">
+              <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+              <folding>
+                <marker date="1518990726063" expanded="false" signature="6:78" ph="..." />
+                <marker date="1518990726063" expanded="true" signature="113:2127" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="401:923" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="944:1835" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1033:1112" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1157:1236" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1242:1485" ph="/* float horizontal = Input.GetAxis(&quot;RightJoystickHorizontal&quot;); ... */" />
+                <marker date="1518990726063" expanded="true" signature="1586:1619" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1646:1679" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1710:1743" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1771:1807" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1893:2122" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1913:1939" ph="{...}" />
+                <marker date="1518990726063" expanded="true" signature="1969:2117" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BulletController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="30" selection-end-column="56" />
+              <folding>
+                <marker date="1518990194825" expanded="false" signature="6:78" ph="..." />
+                <marker date="1518990194825" expanded="true" signature="126:714" ph="{...}" />
+                <marker date="1518990194825" expanded="true" signature="230:276" ph="{...}" />
+                <marker date="1518990194825" expanded="true" signature="297:408" ph="{...}" />
+                <marker date="1518990194825" expanded="true" signature="373:405" ph="{...}" />
+                <marker date="1518990194825" expanded="true" signature="458:712" ph="{...}" />
+                <marker date="1518990194825" expanded="true" signature="594:706" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,26 +105,25 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager3.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetC.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boundary.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetB.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrapButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/cs397/StarCats/StarCats/Assets/Scripts/PlanetA.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GunButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetSpawnerScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlipEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetB.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrapButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetC.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlipEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlanetSpawnerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boundary.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -97,7 +148,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreManager2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreManager3.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Trap.cs" />
         <option value="$PROJECT_DIR$/Assets/ReminderManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetB.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetC.cs" />
@@ -105,10 +155,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanetSpawnerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/FlipEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/SlowDownEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetA.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-        <option value="$USER_HOME$/Desktop/cs397/StarCats/StarCats/Assets/Scripts/PlanetA.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Trap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetA.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetA.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +172,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="724" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -138,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <PATH>
@@ -154,7 +206,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,11 +326,12 @@
       <workItem from="1518987480016" duration="352000" />
       <workItem from="1518988026288" duration="691000" />
       <workItem from="1518989019807" duration="485000" />
+      <workItem from="1518989917344" duration="834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37551000" />
+    <option name="totallyTimeSpent" value="38385000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -291,7 +343,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="724" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="726" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -350,7 +402,7 @@
         <state relative-caret-position="540">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <marker date="1518989134866" expanded="false" signature="6:156" ph="..." />
+            <marker date="1518989134866" expanded="true" signature="6:156" ph="..." />
             <marker date="1518989134866" expanded="true" signature="204:2690" ph="{...}" />
             <marker date="1518989134866" expanded="true" signature="677:971" ph="{...}" />
             <marker date="1518989134866" expanded="true" signature="1030:2150" ph="{...}" />
@@ -389,7 +441,7 @@
         <state relative-caret-position="315">
           <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
           <folding>
-            <marker date="1518989134866" expanded="false" signature="6:156" ph="..." />
+            <marker date="1518989134866" expanded="true" signature="6:156" ph="..." />
             <marker date="1518989134866" expanded="true" signature="204:2690" ph="{...}" />
             <marker date="1518989134866" expanded="true" signature="677:971" ph="{...}" />
             <marker date="1518989134866" expanded="true" signature="1030:2150" ph="{...}" />
@@ -520,13 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetB.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -558,20 +603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FlipEnemy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FlipEnemy.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -579,12 +611,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="30" selection-end-column="56" />
+          <folding>
+            <marker date="1518990194825" expanded="false" signature="6:78" ph="..." />
+            <marker date="1518990194825" expanded="true" signature="126:714" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="230:276" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="297:408" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="373:405" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="458:712" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="594:706" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+        <state relative-caret-position="-1471">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518989134866" expanded="false" signature="6:156" ph="..." />
+            <marker date="1518989134866" expanded="true" signature="6:156" ph="..." />
             <marker date="1518989134866" expanded="true" signature="204:2690" ph="{...}" />
             <marker date="1518989134866" expanded="true" signature="677:971" ph="{...}" />
             <marker date="1518989134866" expanded="true" signature="1030:2150" ph="{...}" />
@@ -605,11 +653,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/cs397/StarCats/StarCats/Assets/Scripts/PlanetA.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="509">
+          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+          <folding>
+            <marker date="1518990726063" expanded="false" signature="6:78" ph="..." />
+            <marker date="1518990726063" expanded="true" signature="113:2127" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="401:923" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="944:1835" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1033:1112" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1157:1236" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1242:1485" ph="/* float horizontal = Input.GetAxis(&quot;RightJoystickHorizontal&quot;); ... */" />
+            <marker date="1518990726063" expanded="true" signature="1586:1619" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1646:1679" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1710:1743" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1771:1807" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1893:2122" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1913:1939" ph="{...}" />
+            <marker date="1518990726063" expanded="true" signature="1969:2117" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+          <folding>
+            <marker date="1518990784426" expanded="false" signature="6:78" ph="..." />
+            <marker date="1518990784426" expanded="true" signature="117:963" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="167:174" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="177:286" ph="/* private void Update() ... */" />
+            <marker date="1518990784426" expanded="true" signature="288:692" ph="/* private void OnCollisionEnter2D(Collision2D other) ... */" />
+            <marker date="1518990784426" expanded="true" signature="743:961" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="790:854" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="923:955" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
