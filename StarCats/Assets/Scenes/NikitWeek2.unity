@@ -326,6 +326,22 @@ Prefab:
       value: 
       objectReference: {fileID: 1645557277513580, guid: 7f0060cc8a75c4f6abea4583d8841d13,
         type: 2}
+    - target: {fileID: 114657195698688368, guid: 451dbba02e65d48668dbdc07698083df,
+        type: 2}
+      propertyPath: shot
+      value: 
+      objectReference: {fileID: 1256432361240768, guid: a57ec50df8cae4ac68bd5daa9f3e3ef5,
+        type: 2}
+    - target: {fileID: 114657195698688368, guid: 451dbba02e65d48668dbdc07698083df,
+        type: 2}
+      propertyPath: shotSpawn
+      value: 
+      objectReference: {fileID: 1662577300}
+    - target: {fileID: 114657195698688368, guid: 451dbba02e65d48668dbdc07698083df,
+        type: 2}
+      propertyPath: fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 451dbba02e65d48668dbdc07698083df, type: 2}
   m_IsPrefabParent: 0
@@ -626,7 +642,7 @@ RectTransform:
   - {fileID: 1815502094}
   - {fileID: 329304662}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -638,6 +654,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224972888301441670, guid: 4342f07ec02ab4035a35044bfed9aa08,
     type: 2}
   m_PrefabInternal: {fileID: 1837613255}
+--- !u!4 &1662577300 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4128839202335102, guid: 451dbba02e65d48668dbdc07698083df,
+    type: 2}
+  m_PrefabInternal: {fileID: 545413488}
 --- !u!224 &1815502094 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224921874499161708, guid: 32e3cc3225b674180a91f87c995bcf48,
@@ -784,7 +805,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4007053327423526, guid: aac7e46b08a3b4906846d6b1c3274191, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114423395399465948, guid: aac7e46b08a3b4906846d6b1c3274191,
         type: 2}

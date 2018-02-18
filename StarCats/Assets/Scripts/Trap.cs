@@ -39,12 +39,12 @@ public class Trap : MonoBehaviour
 		var pos = trap.position;
 		if (Input.GetKey("j") && pos.x > minBound)
 		{
-			pos = pos - (new Vector3(3.0f, 0.0f,0.0f));
+			pos = pos - (new Vector3(0.5f, 0.0f,0.0f));
 			trap.position = pos;
 		}
 		if (Input.GetKey("l") && pos.x < maxBound)
 		{
-			pos = pos + (new Vector3(3.0f, 0.0f,0.0f));
+			pos = pos + (new Vector3(0.5f, 0.0f,0.0f));
 			trap.position = pos;
 		}
 		

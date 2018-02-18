@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour {
 	public GameObject trap;
 	public bool canSetTrap;
 	
+	//bullet controller details
+	public GameObject shot;
+	public Transform shotSpawn;
+	public float fireRate;
+	private float nextFire;
+	
+	
+	
 	
 
 	// Use this for initialization
@@ -72,5 +80,14 @@ public class PlayerController : MonoBehaviour {
 		
 		
 
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
+		{
+			nextFire = Time.time + fireRate;
+			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+		}
 	}
 }
