@@ -8,13 +8,15 @@ using UnityEngine.Assertions.Must;
 public class PlayerController : MonoBehaviour {
 
     public Transform player;
-    public float speed;
+    private static float speed;
 	public float maxBound, minBound;
 	public Rigidbody2D rb;
 	public float thrust;
 	public Camera cam;
 	public GameObject trap;
 	public bool canSetTrap;
+	private static string inputName;
+	private static float initialSpeed;
 	
 	//bullet controller details
 	public GameObject shot;
@@ -34,6 +36,9 @@ public class PlayerController : MonoBehaviour {
 		maxBound = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x;
 		minBound = cam.ScreenToWorldPoint(new Vector2(0,0)).x;
 		canSetTrap = true;
+		inputName = "Horizontal";
+		speed = 15f;
+		initialSpeed = speed;
 	}
 	
 	// Update is called once per frame
@@ -45,11 +50,21 @@ public class PlayerController : MonoBehaviour {
 			Instantiate(trap,butt,Quaternion.identity);
 			canSetTrap = false;
 		}
-		
-		float horizontal = Input.GetAxis("Horizontal");	
+
+		float horizontal = Input.GetAxis(inputName); //"Horizontal");	
 		Vector2 movement = new Vector2(horizontal, 0.0f);
 		rb.velocity = movement * speed;
 
+		if (inputName == "FlippedHorizontal")
+		{
+			StartCoroutine(NormalInput());
+		}
+
+		if (speed < initialSpeed)
+		{
+			StartCoroutine(NormalSpeed());
+		}
+		
 		var pos = rb.position;
 		//rb.position = new Vector2(Mathf.Clamp(rb.position.x, minBound, maxBound), rb.position.y);
 
@@ -89,5 +104,31 @@ public class PlayerController : MonoBehaviour {
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 		}
+	}
+	
+	
+	
+	IEnumerator NormalInput()
+	{
+		yield return new WaitForSeconds(5);
+		inputName = "Horizontal";
+
+	}
+	
+	public static void FlipInput()
+	{
+		inputName = "FlippedHorizontal";
+
+	}
+
+	public static void SlowDown()
+	{
+		speed = initialSpeed * 0.2f;
+	}
+
+	IEnumerator NormalSpeed()
+	{
+		yield return new WaitForSeconds(5);
+		speed = initialSpeed;
 	}
 }
