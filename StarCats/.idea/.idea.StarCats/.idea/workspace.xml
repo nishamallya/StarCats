@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-117">
-              <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+              <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
               <folding>
                 <marker date="1518917775898" expanded="false" signature="6:78" ph="..." />
                 <marker date="1518917775898" expanded="true" signature="113:2124" ph="{...}" />
@@ -290,12 +290,12 @@
       <workItem from="1518745336840" duration="1092000" />
       <workItem from="1518748817693" duration="3860000" />
       <workItem from="1518812579796" duration="10040000" />
-      <workItem from="1518905543500" duration="10815000" />
+      <workItem from="1518905543500" duration="10920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34070000" />
+    <option name="totallyTimeSpent" value="34175000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -678,7 +678,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-117">
-          <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
           <folding>
             <marker date="1518917775898" expanded="false" signature="6:78" ph="..." />
             <marker date="1518917775898" expanded="true" signature="113:2124" ph="{...}" />
