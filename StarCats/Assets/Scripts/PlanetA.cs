@@ -50,7 +50,7 @@ public class PlanetA : MonoBehaviour {
 
 		
 		
-		if (other.gameObject.GetComponent<BoxCollider2D>() != null)
+		if (other.gameObject.CompareTag("Wall"))
 		{
 			Destroy(gameObject);
 		}

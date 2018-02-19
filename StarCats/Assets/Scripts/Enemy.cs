@@ -56,22 +56,12 @@ public class Enemy : MonoBehaviour {
 //			}
 //
 //		}
-	
+
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.name == "Player")
-		{
-		
-			Destroy(gameObject);
-			if (ScoreManager.storageA > 0)
-			{
-				ScoreManager.AddScore((-1));
-			}
-			
 
-		}
-		
-		if (other.gameObject.GetComponent<BoxCollider2D>()!= null)
+
+		if (other.gameObject.CompareTag("Wall") || other.gameObject.name == "Player")
 		{
 			Destroy(gameObject);
 			if (Health.healthcount > 0)
@@ -80,9 +70,27 @@ public class Enemy : MonoBehaviour {
 			}
 			if (ScoreManager.storageA > 0)
 			{
-				ScoreManager.AddScore(-1);				}
-				
+				ScoreManager.AddScore(-1);
+			}
+
+		}
+
+		if (other.gameObject.CompareTag("Trap"))
+		{
+			if (other.gameObject.GetComponent<Trap>().isSet)
+			{
+				Destroy(gameObject);
+			}
+			
+		}
+		
+		if (other.gameObject.CompareTag("Bullet"))
+		{
+			Destroy(gameObject);
+			Destroy(other.gameObject);
+			
 		}
 	}
+	
 	}
 

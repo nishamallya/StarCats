@@ -27,8 +27,7 @@ public class BulletController : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.name == "Enemies" || other.gameObject.name == "FlipEnemy" 
-		    || other.gameObject.name == "SlowDownEnemy")
+		if( other.gameObject.CompareTag("Enemy"))
 		{
 			Destroy(other.gameObject);
 			Destroy(gameObject);
