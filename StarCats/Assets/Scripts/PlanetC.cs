@@ -46,7 +46,7 @@ public class PlanetC : MonoBehaviour
 	
 		}
 		
-		if (other.gameObject.GetComponent<BoxCollider2D>() != null)
+		if (other.gameObject.CompareTag("Wall"))
 		{
 			Destroy(gameObject);
 		}

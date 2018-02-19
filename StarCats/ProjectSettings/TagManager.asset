@@ -7,6 +7,8 @@ TagManager:
   - Planet
   - Bullet
   - Enemy
+  - Trap
+  - Wall
   layers:
   - Default
   - TransparentFX

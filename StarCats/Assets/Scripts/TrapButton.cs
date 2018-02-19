@@ -23,11 +23,12 @@ public class TrapButton : MonoBehaviour {
 	private void AddTrap()
 	{
 		ScoreManager.AddScore(-Trapprice);
+		TrapCounter.AddTrap(1);
 	}
 
 	void Update()
 	{
-		if (ScoreManager.storageA < Trapprice)
+		if (ScoreManager.storageA < Trapprice || TrapCounter.trapCount >= TrapCounter.maxtraps)
 		{
 			btn.interactable = false;
 		}

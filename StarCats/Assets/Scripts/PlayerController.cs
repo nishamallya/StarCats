@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	
 	
 	
+	
 
 	// Use this for initialization
 	void Start ()
@@ -39,16 +40,18 @@ public class PlayerController : MonoBehaviour {
 		inputName = "Horizontal";
 		speed = 15f;
 		initialSpeed = speed;
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (Input.GetKeyDown("return") && canSetTrap == true)
+		if (Input.GetKeyDown("return") && canSetTrap && TrapCounter.trapCount > 0)
 		{
 			Vector2 butt = new Vector2(0, 0);
 			Instantiate(trap,butt,Quaternion.identity);
 			canSetTrap = false;
+			TrapCounter.AddTrap(-1);
 		}
 
 		float horizontal = Input.GetAxis(inputName); //"Horizontal");	

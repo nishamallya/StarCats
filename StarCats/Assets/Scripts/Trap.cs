@@ -14,7 +14,7 @@ public class Trap : MonoBehaviour
 	public float bottomBound;
 	public bool isSet;
 	public PlayerController temp_player;
-	
+	public float trapTime;
 
 	// Use this for initialization
 	void Start ()
@@ -30,7 +30,9 @@ public class Trap : MonoBehaviour
 		trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
 		isSet = false;
 		temp_player = FindObjectOfType<PlayerController>();
-		
+		trapTime = 10.0f;
+
+
 	}
 
 	void setPosition()
@@ -80,20 +82,29 @@ public class Trap : MonoBehaviour
 	void FixedUpdate()
 	{
 		
+		
 		if (!isSet)
 		{
 			setPosition();
 		}
 
-		if (Input.GetKeyDown("s"))
+		if (Input.GetKeyDown("k"))
 		{
 			isSet = true;
 			temp_player.canSetTrap = true;
 			trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 		}
 
+		if (isSet)
+		{
+			trapTime -= Time.fixedDeltaTime;
 
+			if (trapTime < 0)
+			{
+				Destroy(gameObject);
+			}
+		}
 	}
-
+		
 	
 }
