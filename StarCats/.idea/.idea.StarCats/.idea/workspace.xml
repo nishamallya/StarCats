@@ -40,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlanetA.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlanetA.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="419">
@@ -62,10 +62,10 @@
       <file leaf-file-name="Trap.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1518990726063" expanded="false" signature="6:78" ph="..." />
+                <marker date="1518990726063" expanded="true" signature="6:78" ph="..." />
                 <marker date="1518990726063" expanded="true" signature="113:2127" ph="{...}" />
                 <marker date="1518990726063" expanded="true" signature="401:923" ph="{...}" />
                 <marker date="1518990726063" expanded="true" signature="944:1835" ph="{...}" />
@@ -84,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BulletController.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BulletController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="180">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <marker date="1518990194825" expanded="false" signature="6:78" ph="..." />
                 <marker date="1518990194825" expanded="true" signature="126:714" ph="{...}" />
@@ -326,12 +326,12 @@
       <workItem from="1518987480016" duration="352000" />
       <workItem from="1518988026288" duration="691000" />
       <workItem from="1518989019807" duration="485000" />
-      <workItem from="1518989917344" duration="834000" />
+      <workItem from="1518989917344" duration="1044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38385000" />
+    <option name="totallyTimeSpent" value="38595000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,7 +344,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -611,22 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="30" selection-end-column="56" />
-          <folding>
-            <marker date="1518990194825" expanded="false" signature="6:78" ph="..." />
-            <marker date="1518990194825" expanded="true" signature="126:714" ph="{...}" />
-            <marker date="1518990194825" expanded="true" signature="230:276" ph="{...}" />
-            <marker date="1518990194825" expanded="true" signature="297:408" ph="{...}" />
-            <marker date="1518990194825" expanded="true" signature="373:405" ph="{...}" />
-            <marker date="1518990194825" expanded="true" signature="458:712" ph="{...}" />
-            <marker date="1518990194825" expanded="true" signature="594:706" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1471">
@@ -653,12 +636,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+          <folding>
+            <marker date="1518990784426" expanded="false" signature="6:78" ph="..." />
+            <marker date="1518990784426" expanded="true" signature="117:963" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="167:174" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="177:286" ph="/* private void Update() ... */" />
+            <marker date="1518990784426" expanded="true" signature="288:692" ph="/* private void OnCollisionEnter2D(Collision2D other) ... */" />
+            <marker date="1518990784426" expanded="true" signature="743:961" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="790:854" ph="{...}" />
+            <marker date="1518990784426" expanded="true" signature="923:955" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Trap.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518990726063" expanded="false" signature="6:78" ph="..." />
+            <marker date="1518990726063" expanded="true" signature="6:78" ph="..." />
             <marker date="1518990726063" expanded="true" signature="113:2127" ph="{...}" />
             <marker date="1518990726063" expanded="true" signature="401:923" ph="{...}" />
             <marker date="1518990726063" expanded="true" signature="944:1835" ph="{...}" />
@@ -676,19 +676,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlanetA.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BulletController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <marker date="1518990784426" expanded="false" signature="6:78" ph="..." />
-            <marker date="1518990784426" expanded="true" signature="117:963" ph="{...}" />
-            <marker date="1518990784426" expanded="true" signature="167:174" ph="{...}" />
-            <marker date="1518990784426" expanded="true" signature="177:286" ph="/* private void Update() ... */" />
-            <marker date="1518990784426" expanded="true" signature="288:692" ph="/* private void OnCollisionEnter2D(Collision2D other) ... */" />
-            <marker date="1518990784426" expanded="true" signature="743:961" ph="{...}" />
-            <marker date="1518990784426" expanded="true" signature="790:854" ph="{...}" />
-            <marker date="1518990784426" expanded="true" signature="923:955" ph="{...}" />
+            <marker date="1518990194825" expanded="false" signature="6:78" ph="..." />
+            <marker date="1518990194825" expanded="true" signature="126:714" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="230:276" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="297:408" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="373:405" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="458:712" ph="{...}" />
+            <marker date="1518990194825" expanded="true" signature="594:706" ph="{...}" />
           </folding>
         </state>
       </provider>
