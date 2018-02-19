@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
@@ -27,5 +28,20 @@ public class Health : MonoBehaviour {
 	{
 		_Health.text = "Health: " + healthcount;
 
+	}
+	
+	private void FixedUpdate()
+	{
+		
+		if (healthcount <= 0)
+		{
+			GameOver();
+		}
+
+	}
+
+	public void GameOver()
+	{
+		SceneManager.LoadScene("Game Over");
 	}
 }
