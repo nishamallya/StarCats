@@ -39,17 +39,26 @@ public class Trap : MonoBehaviour
 	{
 		//movements
 		var pos = trap.position;
-		if (Input.GetKey("j") && pos.x > minBound)
+		/*if (Input.GetButton("TrapLeft") && pos.x > minBound)
 		{
 			pos = pos - (new Vector3(0.5f, 0.0f,0.0f));
 			trap.position = pos;
 		}
-		if (Input.GetKey("l") && pos.x < maxBound)
+		if (Input.GetButton("TrapRight") && pos.x < maxBound)
 		{
 			pos = pos + (new Vector3(0.5f, 0.0f,0.0f));
 			trap.position = pos;
 		}
+		*/
+		float x = Input.GetAxisRaw("RightJoystickHorizontal");
 		
+		if( x < 0.1f  && x > -0.1f){
+			x = 0.0f;
+        }
+		
+		pos = pos + (new Vector3(x, 0.0f,0.0f));
+		trap.position = pos;
+	
 		/*
 		float horizontal = Input.GetAxis("RightJoystickHorizontal");
 		float vert = Input.GetAxis("RightJoystickVertical");
@@ -73,7 +82,7 @@ public class Trap : MonoBehaviour
 		if (pos.y > topBound - 1)
 		{
 			pos.y = bottomBound + 1;
-		}
+		}	
 	
 		trap.position = pos;
 	}
@@ -88,12 +97,14 @@ public class Trap : MonoBehaviour
 			setPosition();
 		}
 
-		if (Input.GetKeyDown("k"))
+		if (Input.GetButtonDown("SetTrap"))
 		{
 			isSet = true;
 			temp_player.canSetTrap = true;
 			trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+
 		}
+		
 
 		if (isSet)
 		{

@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour
 
 	public static void UpdateScore()
 	{
-		_AScore.text = "Points: " + storageA;
+		_AScore.text = ":" + storageA;
 
 	}
 }

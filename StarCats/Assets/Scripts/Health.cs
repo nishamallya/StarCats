@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
-	public static int healthcount = 80;
+	public static int healthcount = 100;
 	private static Text _Health;
-	public static int maxhealth = 100;
+	public static int maxhealth = 150;
 		
 	// Use this for initialization
 	internal void Start ()
@@ -27,5 +28,20 @@ public class Health : MonoBehaviour {
 	{
 		_Health.text = "Health: " + healthcount;
 
+	}
+	
+	private void FixedUpdate()
+	{
+		
+		if (healthcount <= 0)
+		{
+			GameOver();
+		}
+
+	}
+
+	public void GameOver()
+	{
+		SceneManager.LoadScene("Game Over");
 	}
 }
