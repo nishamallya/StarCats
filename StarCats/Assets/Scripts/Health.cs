@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
-	public static int healthcount = 80;
+	public static int healthcount = 100;
 	private static Text _Health;
-	public static int maxhealth = 100;
+	public static int maxhealth = 150;
 		
 	// Use this for initialization
 	internal void Start ()

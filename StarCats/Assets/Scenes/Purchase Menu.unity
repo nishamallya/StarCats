@@ -918,12 +918,12 @@ Prefab:
     - target: {fileID: 224972888301441670, guid: 4342f07ec02ab4035a35044bfed9aa08,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 15
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 224972888301441670, guid: 4342f07ec02ab4035a35044bfed9aa08,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 294
+      value: 292.87
       objectReference: {fileID: 0}
     - target: {fileID: 224972888301441670, guid: 4342f07ec02ab4035a35044bfed9aa08,
         type: 2}

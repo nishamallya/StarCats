@@ -46,7 +46,13 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (Input.GetKeyDown("return") && canSetTrap && TrapCounter.trapCount > 0)
+		if (Input.GetAxis("Trigger") > 0.9 && Time.fixedTime > nextFire)
+		{
+			nextFire = Time.time + fireRate;
+			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+		}
+		
+		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
 		{
 			Vector2 butt = new Vector2(0, 0);
 			Instantiate(trap,butt,Quaternion.identity);
@@ -102,11 +108,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
-		{
-			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-		}
+		
 	}
 	
 	
