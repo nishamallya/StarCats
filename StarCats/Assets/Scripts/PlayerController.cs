@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour {
 	public bool canSetTrap;
 	private static string inputName;
 	private static float initialSpeed;
+	public GameObject timerpanel;
+	public float countdowntime;
 	
 	//bullet controller details
 	public GameObject shot;
@@ -31,7 +34,10 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()
+
 	{
+		StartCoroutine(Pause());
+		countdowntime = 3;
 		Screen.fullScreen = true;
 		player = GetComponent<Transform>();
 		rb = GetComponent<Rigidbody2D>();
@@ -136,5 +142,28 @@ public class PlayerController : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
+	}
+
+	public void StartCountDown()
+	{
+		timerpanel.SetActive(true);
+		countdowntime -= Time.realtimeSinceStartup;
+
+	}
+	
+	private IEnumerator Pause()
+	{
+		Time.timeScale = 0.00001f;
+		timerpanel.SetActive(true);
+		float pauseEndTime = Time.realtimeSinceStartup + 3;
+		while (Time.realtimeSinceStartup < pauseEndTime)
+		{
+			yield return 0;
+			timerpanel.GetComponentInChildren<Text>().text = Mathf.RoundToInt(pauseEndTime - Time.realtimeSinceStartup).ToString();
+
+		}
+		
+		timerpanel.SetActive(false);
+		Time.timeScale = 1;
 	}
 }
