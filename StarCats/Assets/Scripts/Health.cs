@@ -4,16 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour {
+public class Health : MonoBehaviour
+{
 
-	public static int healthcount = 100;
+	public static int healthcount;
 	private static Text _Health;
-	public static int maxhealth = 150;
+	public static Slider HealthSlider;
+	public static int maxhealth = 200;
 		
 	// Use this for initialization
 	internal void Start ()
 	{
 		_Health = GetComponent<Text>();
+		HealthSlider = FindObjectOfType<Slider>();
+		healthcount = 200;
 		UpdateHealth();
 	}
 
@@ -26,7 +30,8 @@ public class Health : MonoBehaviour {
 
 	public static void UpdateHealth()
 	{
-		_Health.text = "Health: " + healthcount;
+		//_Health.text = "Health: " + healthcount;
+		HealthSlider.value = healthcount;
 
 	}
 	

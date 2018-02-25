@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 public class Trap : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class Trap : MonoBehaviour
 	public float bottomBound;
 	public bool isSet;
 	public PlayerController temp_player;
-	public float trapTime;
+	public float trapTime;	
+	private bool isBlinking;
 
 	// Use this for initialization
 	void Start ()
@@ -31,6 +33,7 @@ public class Trap : MonoBehaviour
 		isSet = false;
 		temp_player = FindObjectOfType<PlayerController>();
 		trapTime = 10.0f;
+		isBlinking = false;
 
 
 	}
@@ -110,12 +113,25 @@ public class Trap : MonoBehaviour
 		{
 			trapTime -= Time.fixedDeltaTime;
 
+			if (trapTime < 3 & !isBlinking)
+			{
+				InvokeRepeating("Blink", 0.0f, 0.15f);
+				isBlinking = true;
+			}
+
 			if (trapTime < 0)
 			{
 				Destroy(gameObject);
 			}
 		}
 	}
-		
+
+	public void Blink()
+	{
+		GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+
+
+	}
+
 	
 }
