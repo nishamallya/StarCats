@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		Screen.fullScreen = true;
 		player = GetComponent<Transform>();
 		rb = GetComponent<Rigidbody2D>();
 		maxBound = cam.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x;

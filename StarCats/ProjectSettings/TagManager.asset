@@ -49,3 +49,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Planet
+    uniqueID: 3709919831
+    locked: 0
