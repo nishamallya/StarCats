@@ -17,6 +17,9 @@ public class Trap : MonoBehaviour
 	public PlayerController temp_player;
 	public float trapTime;	
 	private bool isBlinking;
+	
+	
+	
 
 	// Use this for initialization
 	void Start ()
@@ -34,6 +37,7 @@ public class Trap : MonoBehaviour
 		temp_player = FindObjectOfType<PlayerController>();
 		trapTime = 10.0f;
 		isBlinking = false;
+
 
 
 	}

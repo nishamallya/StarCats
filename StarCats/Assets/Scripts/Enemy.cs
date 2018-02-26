@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
+
+	public GameObject explosionGO;
 
 	// Use this for initialization
 	void Start () {
@@ -85,10 +88,17 @@ public class Enemy : MonoBehaviour {
 		
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			playExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
 			
 		}
+	}
+
+	void playExplosion()
+	{
+		GameObject explosion = (GameObject) Instantiate(explosionGO);
+		explosion.transform.position = transform.position;
 	}
 	
 	}

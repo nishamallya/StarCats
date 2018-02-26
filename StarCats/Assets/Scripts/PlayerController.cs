@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
@@ -20,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	private static float initialSpeed;
 	public GameObject timerpanel;
 	public float countdowntime;
+	public int trapButtonCount;
 	
 	//bullet controller details
 	public GameObject shot;
@@ -47,6 +44,7 @@ public class PlayerController : MonoBehaviour {
 		inputName = "Horizontal";
 		speed = 15f;
 		initialSpeed = speed;
+		trapButtonCount = 0;
 
 	}
 	
@@ -59,12 +57,19 @@ public class PlayerController : MonoBehaviour {
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 		}
 		
-		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
+		if (Input.GetButton("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
 		{
 			Vector2 butt = new Vector2(0, 0);
 			Instantiate(trap,butt,Quaternion.identity);
 			canSetTrap = false;
 			TrapCounter.AddTrap(-1);
+			trapButtonCount++;
+
+		}
+
+		if (Input.GetButtonUp("CreateTrap"))
+		{
+			trapButtonCount = 0;
 		}
 
 		float horizontal = Input.GetAxis(inputName); //"Horizontal");	
@@ -117,8 +122,6 @@ public class PlayerController : MonoBehaviour {
 	{
 		
 	}
-	
-	
 	
 	IEnumerator NormalInput()
 	{

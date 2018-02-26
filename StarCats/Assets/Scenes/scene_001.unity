@@ -285,6 +285,14 @@ Prefab:
       propertyPath: timerpanel
       value: 
       objectReference: {fileID: 275227897}
+    - target: {fileID: 4128839202335102, guid: 451dbba02e65d48668dbdc07698083df, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128839202335102, guid: 451dbba02e65d48668dbdc07698083df, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 451dbba02e65d48668dbdc07698083df, type: 2}
   m_IsPrefabParent: 0

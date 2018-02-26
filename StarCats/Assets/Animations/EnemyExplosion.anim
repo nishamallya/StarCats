@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: EnemyExplosion
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: c592cd2e39f714a239576c6b9b6fb061, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: a78edf32de1444111adf82a85c57b0e2, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: abffa4835e51d4a2688e0e097aaa426a, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 18db147cf32c142d3ad5cb53706c3afc, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 18e80034eca1e4f5683b9388fc9a09f3, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: dd3f5a269569c433695b67005023082e, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 09470b9dbdf004add92087b9efb9649f, type: 3}
+    - time: 0.5833333
+      value: {fileID: 21300000, guid: 88afc1167403240369ec57a9086b5d88, type: 3}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: def02029b6ca64e28a0e08549e4cc47c, type: 3}
+    - time: 0.75
+      value: {fileID: 21300000, guid: 0560808c95ce14ebfa90dc140aa56488, type: 3}
+    - time: 0.8333333
+      value: {fileID: 21300000, guid: cdf758a177474472e97a791e592bc91f, type: 3}
+    - time: 0.9166667
+      value: {fileID: 21300000, guid: bdb23b9ff4ab74436b380be875d0d7a4, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 195267cbe69f245a4992d05656d656ba, type: 3}
+    - time: 1.0833334
+      value: {fileID: 21300000, guid: 4335b693b135648028278c3db95257a6, type: 3}
+    - time: 1.1666666
+      value: {fileID: 21300000, guid: c166d5f8d6f2d44dd9e4bba0ee9884d2, type: 3}
+    - time: 1.25
+      value: {fileID: 21300000, guid: ad495b5b82e4d4133a7c0fcbd6ed3645, type: 3}
+    - time: 1.3333334
+      value: {fileID: 21300000, guid: 396a8429bc24b44b9aea871a75e44945, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: c592cd2e39f714a239576c6b9b6fb061, type: 3}
+    - {fileID: 21300000, guid: a78edf32de1444111adf82a85c57b0e2, type: 3}
+    - {fileID: 21300000, guid: abffa4835e51d4a2688e0e097aaa426a, type: 3}
+    - {fileID: 21300000, guid: 18db147cf32c142d3ad5cb53706c3afc, type: 3}
+    - {fileID: 21300000, guid: 18e80034eca1e4f5683b9388fc9a09f3, type: 3}
+    - {fileID: 21300000, guid: dd3f5a269569c433695b67005023082e, type: 3}
+    - {fileID: 21300000, guid: 09470b9dbdf004add92087b9efb9649f, type: 3}
+    - {fileID: 21300000, guid: 88afc1167403240369ec57a9086b5d88, type: 3}
+    - {fileID: 21300000, guid: def02029b6ca64e28a0e08549e4cc47c, type: 3}
+    - {fileID: 21300000, guid: 0560808c95ce14ebfa90dc140aa56488, type: 3}
+    - {fileID: 21300000, guid: cdf758a177474472e97a791e592bc91f, type: 3}
+    - {fileID: 21300000, guid: bdb23b9ff4ab74436b380be875d0d7a4, type: 3}
+    - {fileID: 21300000, guid: 195267cbe69f245a4992d05656d656ba, type: 3}
+    - {fileID: 21300000, guid: 4335b693b135648028278c3db95257a6, type: 3}
+    - {fileID: 21300000, guid: c166d5f8d6f2d44dd9e4bba0ee9884d2, type: 3}
+    - {fileID: 21300000, guid: ad495b5b82e4d4133a7c0fcbd6ed3645, type: 3}
+    - {fileID: 21300000, guid: 396a8429bc24b44b9aea871a75e44945, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.4166667
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events:
+  - time: 1.4166666
+    functionName: DestroyGameObject
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
