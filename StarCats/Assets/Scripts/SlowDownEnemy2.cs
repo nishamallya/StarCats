@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SlowDownEnemy2 : MonoBehaviour {
+	
+	public GameObject explosionGO;
 
 	private float speed = 0.05f;
 
@@ -51,6 +53,7 @@ public class SlowDownEnemy2 : MonoBehaviour {
 		{
 			if (other.gameObject.GetComponent<RadialTrap>().isSet)
 			{
+				playExplosion();
 				Destroy(gameObject);
 			}
 			
@@ -58,9 +61,16 @@ public class SlowDownEnemy2 : MonoBehaviour {
 		
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			playExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
 			
 		}
+	}
+	
+	void playExplosion()
+	{
+		GameObject explosion = (GameObject) Instantiate(explosionGO);
+		explosion.transform.position = transform.position;
 	}
 }

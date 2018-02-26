@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemies2 : MonoBehaviour {
 
+	public GameObject explosionGO;
+
 	private float speed = 0.05f;
 
 	private Vector3 direction;
@@ -45,6 +47,7 @@ public class Enemies2 : MonoBehaviour {
 		{
 			if (other.gameObject.GetComponent<RadialTrap>().isSet)
 			{
+				playExplosion();
 				Destroy(gameObject);
 			}
 			
@@ -52,9 +55,16 @@ public class Enemies2 : MonoBehaviour {
 		
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			playExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
 			
 		}
+	}
+	
+	void playExplosion()
+	{
+		GameObject explosion = (GameObject) Instantiate(explosionGO);
+		explosion.transform.position = transform.position;
 	}
 }

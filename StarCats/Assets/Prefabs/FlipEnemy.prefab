@@ -152,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionGo: {fileID: 1594490430349882, guid: 7961fe500e1634e5f935f08e37705e3c,
     type: 2}
+  boltStrikeGO: {fileID: 1303057247524908, guid: d2ee18d7356324f36b4cfe180dd75316,
+    type: 2}
 --- !u!212 &212986898029084574
 SpriteRenderer:
   m_ObjectHideFlags: 1

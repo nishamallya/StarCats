@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlipEnemy : MonoBehaviour
 {
 	public GameObject explosionGo;
+	public GameObject boltStrikeGO;
 
 	// Use this for initialization
 	void Start () {
@@ -51,6 +52,7 @@ public class FlipEnemy : MonoBehaviour
 		
 		if (other.gameObject.CompareTag("Wall") || other.gameObject.name == "Player")
 		{
+			playBoltStrike();
 			Destroy(gameObject);
 			if (Health.healthcount > 0)
 			{
@@ -85,5 +87,11 @@ public class FlipEnemy : MonoBehaviour
 	{
 		GameObject explosion = (GameObject) Instantiate(explosionGo);
 		explosion.transform.position = transform.position;
+	}
+	
+	void playBoltStrike()
+	{
+		GameObject strike = (GameObject) Instantiate(boltStrikeGO);
+		strike.transform.position = transform.position;
 	}
 }

@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
 
 	public GameObject explosionGO;
+	public GameObject boltStrikeGO;
 
 	// Use this for initialization
 	void Start () {
@@ -65,6 +66,7 @@ public class Enemy : MonoBehaviour
 
 		if (other.gameObject.CompareTag("Wall") || other.gameObject.name == "Player")
 		{
+			playBoltStrike();
 			Destroy(gameObject);
 			if (Health.healthcount > 0)
 			{
@@ -97,6 +99,12 @@ public class Enemy : MonoBehaviour
 	{
 		GameObject explosion = (GameObject) Instantiate(explosionGO);
 		explosion.transform.position = transform.position;
+	}
+
+	void playBoltStrike()
+	{
+		GameObject strike = (GameObject) Instantiate(boltStrikeGO);
+		strike.transform.position = transform.position;
 	}
 	
 	}
