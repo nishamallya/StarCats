@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowDownEnemy : MonoBehaviour {
+public class SlowDownEnemy : MonoBehaviour
+{
+
+	public GameObject explosionGO;
 
 	void Start () {
 		
@@ -49,10 +52,7 @@ public class SlowDownEnemy : MonoBehaviour {
 			{
 				Health.AddHealth(-10);
 			}
-			if (ScoreManager.storageA > 0)
-			{
-				ScoreManager.AddScore(-1);
-			}
+			
 			PlayerController.SlowDown();
 			ReminderManager.SlowDown();
 
@@ -62,6 +62,7 @@ public class SlowDownEnemy : MonoBehaviour {
 		{
 			if (other.gameObject.GetComponent<Trap>().isSet)
 			{
+				playerExplosion();
 				Destroy(gameObject);
 			}
 			
@@ -69,9 +70,16 @@ public class SlowDownEnemy : MonoBehaviour {
 		
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			playerExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
 			
 		}
+	}
+
+	void playerExplosion()
+	{
+		GameObject explosion = (GameObject) Instantiate((explosionGO));
+		explosion.transform.position = transform.position;
 	}
 }

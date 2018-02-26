@@ -1,5 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
@@ -16,8 +20,7 @@ public class PlayerController : MonoBehaviour {
 	private static float initialSpeed;
 	public GameObject timerpanel;
 	public float countdowntime;
-	public int trapButtonCount;
-	
+
 	//bullet controller details
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -44,7 +47,6 @@ public class PlayerController : MonoBehaviour {
 		inputName = "Horizontal";
 		speed = 15f;
 		initialSpeed = speed;
-		trapButtonCount = 0;
 
 	}
 	
@@ -55,22 +57,34 @@ public class PlayerController : MonoBehaviour {
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+			
 		}
 		
-		if (Input.GetButton("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
+		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
 		{
 			Vector2 butt = new Vector2(0, 0);
 			Instantiate(trap,butt,Quaternion.identity);
-			canSetTrap = false;
+			StartCoroutine(ActivateTrap());
 			TrapCounter.AddTrap(-1);
-			trapButtonCount++;
-
 		}
+		
 
-		if (Input.GetButtonUp("CreateTrap"))
+		/*if (Input.GetButtonDown("CreateTrap"))
 		{
-			trapButtonCount = 0;
-		}
+			if (trapclick % 2 != 0 && canSetTrap && TrapCounter.trapCount > 0)
+			{
+				Vector2 bt = new Vector2(0, 0);
+				Instantiate(trap, bt, Quaternion.identity);
+				canSetTrap = false;
+				TrapCounter.AddTrap(-1);
+				trapclick++;
+
+			}
+			else trapclick++;
+			*/
+
+
+		
 
 		float horizontal = Input.GetAxis(inputName); //"Horizontal");	
 		Vector2 movement = new Vector2(horizontal, 0.0f);
@@ -118,10 +132,13 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	void Update()
+	IEnumerator ActivateTrap()
 	{
-		
+		yield return new WaitForSeconds(0.5f);
+		canSetTrap = false;
 	}
+	
+	
 	
 	IEnumerator NormalInput()
 	{

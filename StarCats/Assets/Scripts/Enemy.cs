@@ -70,10 +70,7 @@ public class Enemy : MonoBehaviour
 			{
 				Health.AddHealth(-10);
 			}
-			if (ScoreManager.storageA > 0)
-			{
-				ScoreManager.AddScore(-1);
-			}
+			
 
 		}
 
@@ -81,6 +78,7 @@ public class Enemy : MonoBehaviour
 		{
 			if (other.gameObject.GetComponent<Trap>().isSet)
 			{
+			    playExplosion();
 				Destroy(gameObject);
 			}
 			

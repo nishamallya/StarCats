@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour {
 
-	void DestroyGameObject()
-	{
-		Destroy(gameObject);
-	}
+    void DestroyGameObject()
+    {
+        Destroy(gameObject);
+    }
 }

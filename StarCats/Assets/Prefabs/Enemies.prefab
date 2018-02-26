@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81582779bd3f40fe8ad3d5b9b557f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionGO: {fileID: 1076595572032544, guid: bcc3f2848ecd04c54bcd64686cbc0927,
+  explosionGO: {fileID: 1594490430349882, guid: 7961fe500e1634e5f935f08e37705e3c,
     type: 2}
 --- !u!212 &212986898029084574
 SpriteRenderer:

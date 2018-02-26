@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61614104385056324}
   - component: {fileID: 50818841635358372}
   - component: {fileID: 114200406898846108}
-  - component: {fileID: 212761198842389958}
+  - component: {fileID: 212744128284706226}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1256432361240768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.7220306, y: -1.4332716, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
---- !u!212 &212761198842389958
+  player: {fileID: 0}
+--- !u!212 &212744128284706226
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -132,7 +133,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc8ee890863a44c6e931174f211c95d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1294c7b0be5484331b9c809f5516e5f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

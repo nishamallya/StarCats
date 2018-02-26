@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
 
-	public static int healthcount;
+	public static int healthcount = 200;
 	private static Text _Health;
 	public static Slider HealthSlider;
 	public static int maxhealth = 200;
@@ -17,7 +17,6 @@ public class Health : MonoBehaviour
 	{
 		_Health = GetComponent<Text>();
 		HealthSlider = FindObjectOfType<Slider>();
-		healthcount = 200;
 		UpdateHealth();
 	}
 

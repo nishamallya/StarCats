@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour {
 
     private Transform bullet;
     public float speed;
+	public GameObject player;
 
 	// Use this for initialization
 	void Start ()

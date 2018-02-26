@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlipEnemy : MonoBehaviour {
+public class FlipEnemy : MonoBehaviour
+{
+	public GameObject explosionGo;
 
 	// Use this for initialization
 	void Start () {
@@ -54,10 +56,7 @@ public class FlipEnemy : MonoBehaviour {
 			{
 				Health.AddHealth(-10);
 			}
-			if (ScoreManager.storageA > 0)
-			{
-				ScoreManager.AddScore(-1);
-			}
+			
 			PlayerController.FlipInput();
 			ReminderManager.ReverseControl();
 
@@ -67,6 +66,7 @@ public class FlipEnemy : MonoBehaviour {
 		{
 			if (other.gameObject.GetComponent<Trap>().isSet)
 			{
+				playExplosion();
 				Destroy(gameObject);
 			}
 			
@@ -74,9 +74,16 @@ public class FlipEnemy : MonoBehaviour {
 		
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			playExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
 			
 		}
+	}
+
+	void playExplosion()
+	{
+		GameObject explosion = (GameObject) Instantiate(explosionGo);
+		explosion.transform.position = transform.position;
 	}
 }

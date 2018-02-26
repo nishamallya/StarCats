@@ -17,9 +17,6 @@ public class Trap : MonoBehaviour
 	public PlayerController temp_player;
 	public float trapTime;	
 	private bool isBlinking;
-	
-	
-	
 
 	// Use this for initialization
 	void Start ()
@@ -32,12 +29,11 @@ public class Trap : MonoBehaviour
 		topBound = cam.ScreenToWorldPoint(new Vector2(0, Screen.height)).y;
 		bottomBound = cam.ScreenToWorldPoint(new Vector2(0, 0)).y;
 		//opacity
-		trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
+		//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
 		isSet = false;
 		temp_player = FindObjectOfType<PlayerController>();
 		trapTime = 10.0f;
 		isBlinking = false;
-
 
 
 	}
@@ -104,12 +100,11 @@ public class Trap : MonoBehaviour
 			setPosition();
 		}
 
-		if (Input.GetButtonDown("SetTrap"))
+		if (Input.GetButtonDown("CreateTrap") && temp_player.canSetTrap == false)
 		{
 			isSet = true;
-			temp_player.canSetTrap = true;
-			trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-
+			//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+			StartCoroutine(TrapSetting());
 		}
 		
 
@@ -130,9 +125,16 @@ public class Trap : MonoBehaviour
 		}
 	}
 
+	IEnumerator TrapSetting()
+	{
+		yield return new WaitForSeconds(0.5f);
+		temp_player.canSetTrap = true;
+
+
+	}
 	public void Blink()
 	{
-		GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+		//GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
 
 
 	}

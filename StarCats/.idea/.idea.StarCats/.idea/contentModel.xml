@@ -5,7 +5,7 @@
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="FlipEnemy.cs" t="Include" />
+        <e p="FlipEnemy2.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -13,11 +13,14 @@
             </e>
           </e>
         </e>
-        <e p="ReminderManager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Boundary.cs" t="Include" />
           <e p="BulletController.cs" t="Include" />
+          <e p="BulletLevel2.cs" t="Include" />
+          <e p="Coin.cs" t="Include" />
+          <e p="Enemies2.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="FlipEnemy.cs" t="Include" />
           <e p="GunButton.cs" t="Include" />
           <e p="Health.cs" t="Include" />
           <e p="HealthButton.cs" t="Include" />
@@ -27,14 +30,20 @@
           <e p="PlanetSpawnerScript.cs" t="Include" />
           <e p="PlayButton.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerRadial.cs" t="Include" />
+          <e p="ReminderManager.cs" t="Include" />
+          <e p="ReplayButton.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
           <e p="ScoreManager2.cs" t="Include" />
           <e p="ScoreManager3.cs" t="Include" />
+          <e p="SlowDownEnemy.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
           <e p="Trap.cs" t="Include" />
           <e p="TrapButton.cs" t="Include" />
+          <e p="TrapCounter.cs" t="Include" />
         </e>
-        <e p="SlowDownEnemy.cs" t="Include" />
+        <e p="SlowDownEnemy2.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
@@ -44,7 +53,7 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_StarCats.871823311.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_StarCats.1639179690.00" t="ExcludeRecursive" />
   </component>
   <component name="RiderRiderContentModelStore">
     <excludedPaths>
