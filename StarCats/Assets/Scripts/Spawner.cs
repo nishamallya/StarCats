@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour {
 	public float randX;
 	private float ranY;
 	Vector2 whereToSpawn;
-	public float spawnRate = 0.5f;
+	private float spawnRate = 0.61f;
 	float nextSpawn = 1f;
 	private GameObject[] toSpawn;
 	private int toSpawnIndex;
@@ -77,46 +77,46 @@ public class Spawner : MonoBehaviour {
 		}
 		
 	}
-	// first level has 90 seconds, there will be 180 objects. 1 enemy every 5 seconds (18 enemies), 2 flip enemies, 2 slow down enemies.
+	
 	void WhatToSpawn()
 	{
-		toSpawn = new GameObject[180];
-		int choice = 0;
-		for (int i = 1; i <= 8; i++)
+		toSpawn = new GameObject[90];
+		int choice;
+		for (int i = 1; i <= 20; i++)
 		{
-			if (i == 1 || i == 2)
+			if (1 <= i && i <= 5)
 			{
-				choice = Random.Range(0, 90);
+				choice = Random.Range(0, 45);
 				toSpawn[choice] = FlipEnemy;
 				continue;
 			}
 
-			if (i == 3 || i == 4)
+			if (6 <= i && i <= 10)
 			{
-				choice = Random.Range(0, 90);
+				choice = Random.Range(0, 45);
 				toSpawn[choice] = SlowDownEnemy;
 				continue;
 			}
 
-			if (i == 5 || i == 6)
+			if (11 <= i && i <= 15)
 			{
-				choice = Random.Range(90, 180);
+				choice = Random.Range(45, 90);
 				toSpawn[choice] = FlipEnemy;
 				continue;
 			}
 
-			if (i == 7 || i == 8)
+			if (16 <= i && i <= 20)
 			{
-				choice = Random.Range(90, 180);
+				choice = Random.Range(45, 90);
 				toSpawn[choice] = SlowDownEnemy;
 			}
-
+			
 		}
 
 		int j = 0;
-		while (j < 52)
+		while (j < 40)
 		{
-			choice = Random.Range(0, 180);
+			choice = Random.Range(0, 90);
 			if (toSpawn[choice] == null)
 			{
 				toSpawn[choice] = enemies;
@@ -124,7 +124,7 @@ public class Spawner : MonoBehaviour {
 			}
 		}
 
-		for (int i = 0; i < 180; i++)
+		for (int i = 0; i < 90; i++)
 		{
 			if (toSpawn[i] == null)
 			{
@@ -133,6 +133,7 @@ public class Spawner : MonoBehaviour {
 				toSpawn[i] = planetOptions[innerChoice];
 			}
 		}
+		
 	}
 
 }

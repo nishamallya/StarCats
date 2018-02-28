@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (Input.GetAxis("Trigger") > 0.9 && Time.fixedTime > nextFire)
+		if (Input.GetAxis("Fire3") > 0.9 && Time.fixedTime > nextFire)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour {
 	
-	private float speed = 0.05f;
+	private float speed = 0.025f;
 
 	private Vector3 direction;
 	private float distance;

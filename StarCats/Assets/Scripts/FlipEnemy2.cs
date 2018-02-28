@@ -7,7 +7,7 @@ public class FlipEnemy2 : MonoBehaviour {
 	public GameObject explosionGO;
 	public GameObject boltStrikeGO;
 
-	private float speed = 0.05f;
+	private float speed = 0.025f;
 
 	private Vector3 direction;
 	private float distance;
