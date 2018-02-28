@@ -61,6 +61,7 @@ public class FlipEnemy : MonoBehaviour
 			
 			PlayerController.FlipInput();
 			ReminderManager.ReverseControl();
+			
 
 		}
 

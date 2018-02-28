@@ -15,6 +15,7 @@ public class TrapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 		btn = GetComponent<Button>();
 		childtext.SetActive(false);
 
+		
 		btn.onClick.AddListener(AddTrap);
 		if (ScoreManager.storageA < Trapprice)
 		{
@@ -25,15 +26,20 @@ public class TrapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 	// Update is called once per frame
 	private void AddTrap()
 	{
-		ScoreManager.AddScore(-Trapprice);
-		TrapCounter.AddTrap(1);
+		if (ScoreManager.storageA >= Trapprice && TrapCounter.trapCount < TrapCounter.maxtraps)
+		{
+			ScoreManager.AddScore(-Trapprice);
+			TrapCounter.AddTrap(1);
+		}
+		
 	}
 
 	void Update()
 	{
+		
 		if (ScoreManager.storageA < Trapprice || TrapCounter.trapCount >= TrapCounter.maxtraps)
 		{
-			btn.interactable = false;
+			//btn.interactable = false;
 		}
 	}
 	

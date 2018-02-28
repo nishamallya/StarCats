@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotatePlanet : MonoBehaviour
 {
 
-	public float rotationsPerMinute = 10.0f;
+	public float rotationsPerMinute; //= 10.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class RotatePlanet : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Rotate(6.0f*rotationsPerMinute*Time.deltaTime,0,0);
+		transform.Rotate(0,0, 2.0f*rotationsPerMinute*Time.deltaTime);
 		
 	}
 }

@@ -57,6 +57,7 @@ public class SlowDownEnemy : MonoBehaviour
 			
 			PlayerController.SlowDown();
 			ReminderManager.SlowDown();
+			
 
 		}
 

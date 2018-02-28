@@ -5,6 +5,7 @@ using UnityEngine;
 public class SlowDownEnemy2 : MonoBehaviour {
 	
 	public GameObject explosionGO;
+	public GameObject boltStrikeGO;
 
 	private float speed = 0.05f;
 
@@ -22,6 +23,7 @@ public class SlowDownEnemy2 : MonoBehaviour {
 
 		if (Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y, 2)) < 1.5f)
 		{
+			playBoltStrike();
 			Destroy(gameObject);
 			if (Health.healthcount > 0)
 			{
@@ -37,6 +39,7 @@ public class SlowDownEnemy2 : MonoBehaviour {
 
 		if (other.gameObject.name == "Player")
 		{
+			playBoltStrike();
 			Destroy(gameObject);
 			if (Health.healthcount > 0)
 			{
@@ -72,5 +75,11 @@ public class SlowDownEnemy2 : MonoBehaviour {
 	{
 		GameObject explosion = (GameObject) Instantiate(explosionGO);
 		explosion.transform.position = transform.position;
+	}
+	
+	void playBoltStrike()
+	{
+		GameObject strike = (GameObject) Instantiate(boltStrikeGO);
+		strike.transform.position = transform.position;
 	}
 }

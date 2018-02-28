@@ -26,15 +26,20 @@ public class HealthButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 	// Update is called once per frame
 	private void AddHealth()
 	{
-		ScoreManager.AddScore(-Healthprice);
-		Health.AddHealth(10);
+		if (ScoreManager.storageA >= Healthprice && Health.healthcount < Health.maxhealth)
+		{
+			ScoreManager.AddScore(-Healthprice);
+			Health.AddHealth(10);
+		}
+		
+		
 	}
 
 	void Update()
 	{
 		if (ScoreManager.storageA < Healthprice | Health.healthcount >= Health.maxhealth)
 		{
-			btn.interactable = false;
+			//btn.interactable = false;
 		}
 	}
 	

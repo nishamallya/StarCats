@@ -29,7 +29,7 @@ public class RadialTrap : MonoBehaviour {
 		tiltAngle = 0f;
 		
 		//opacity
-		trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
+		//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
 		isSet = false;
 		temp_player = FindObjectOfType<PlayerRadial>();
 		trapTime = 10.0f;
@@ -73,7 +73,7 @@ public class RadialTrap : MonoBehaviour {
 		if (Input.GetButtonDown("CreateTrap") && temp_player.canSetTrap == false)
 		{
 			isSet = true;
-			trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+			//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 			StartCoroutine(TrapSetting());
 		}
 		
@@ -104,7 +104,7 @@ public class RadialTrap : MonoBehaviour {
 	}
 	public void Blink()
 	{
-		GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+		//GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
 
 
 	}

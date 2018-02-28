@@ -41,7 +41,7 @@ public class PlanetB : MonoBehaviour {
 		{
 
 			Destroy(gameObject);
-			ScoreManager.AddScore(1);
+			ScoreManager.AddScore(10);
 	
 		}
 		

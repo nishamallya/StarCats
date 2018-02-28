@@ -14,6 +14,7 @@ public class BulletController : MonoBehaviour {
 
 		bullet = GetComponent<Transform>();
 
+
 	}
 
 	void FixedUpdate()
@@ -26,15 +27,16 @@ public class BulletController : MonoBehaviour {
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
+	public void OnTriggerEnter2D(Collider2D other)
 	{
-		if( other.gameObject.CompareTag("Enemy"))
+		if(other.gameObject.CompareTag("Enemy"))
 		{
 			Destroy(other.gameObject);
 			Destroy(gameObject);
 			
 			//need to increase score and decrease ammo
 		}
-		
 	}
+
+	
 }

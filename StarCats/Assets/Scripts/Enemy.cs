@@ -93,6 +93,12 @@ public class Enemy : MonoBehaviour
 			Destroy(other.gameObject);
 			
 		}
+
+		if (other.gameObject.CompareTag("Grenade"))
+		{
+			playExplosion();
+			Destroy(gameObject);
+		}
 	}
 
 	void playExplosion()

@@ -32,7 +32,7 @@ public class Coin : MonoBehaviour {
 		{
 
 			Destroy(gameObject);
-			ScoreManager.AddScore(1);
+			ScoreManager.AddScore(10);
 	
 		}
 

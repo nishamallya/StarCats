@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GunButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class GrenadeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	public Button btn;
-	public static int Gunprice = 100;
-	public string Message = "";
+	public static int grenadeprice = 50;
 	public GameObject childtext;
 
-	public bool HasGun = false;
+
+	//public bool HasGun = false;
 	// Use this for initialization
 	void Start ()
 	{
@@ -20,7 +20,7 @@ public class GunButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 		childtext.SetActive(false);
 
 		btn.onClick.AddListener(AddGun);
-		if (ScoreManager.storageA < Gunprice)
+		if (ScoreManager.storageA < grenadeprice)
 		{
 			btn.interactable = false;
 		}
@@ -30,20 +30,18 @@ public class GunButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 	// Update is called once per frame
 	private void AddGun()
 	{
-		if (HasGun == false)
+		if (ScoreManager.storageA >= grenadeprice && GrenadeCounter.gCount < GrenadeCounter.maxgrenades)
 		{
-			ScoreManager.AddScore(-Gunprice);
-			btn.interactable = false;
-			HasGun = true;
-
+			ScoreManager.AddScore(-grenadeprice);
+			GrenadeCounter.AddGrenade(1);
 		}
 	}
 
 	void Update()
 	{
-		if (ScoreManager.storageA < Gunprice)
+		if (ScoreManager.storageA < grenadeprice)
 		{
-			btn.interactable = false;
+			//btn.interactable = false;
 		}
 	}
 

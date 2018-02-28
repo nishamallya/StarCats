@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -20,9 +21,12 @@ public class PlayerController : MonoBehaviour {
 	private static float initialSpeed;
 	public GameObject timerpanel;
 	public float countdowntime;
+	public GameObject slow;
+	public GameObject reverse;
 
 	//bullet controller details
-	public GameObject shot;
+	public GameObject shot; //bullet
+	public GameObject grenade;
 	public Transform shotSpawn;
 	public float fireRate;
 	private float nextFire;
@@ -47,6 +51,9 @@ public class PlayerController : MonoBehaviour {
 		inputName = "Horizontal";
 		speed = 15f;
 		initialSpeed = speed;
+		slow.SetActive(false);
+		reverse.SetActive(false);
+		
 
 	}
 	
@@ -57,6 +64,14 @@ public class PlayerController : MonoBehaviour {
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+			
+		}
+		
+		if (Input.GetAxis("LeftTrigger") > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
+		{
+			nextFire = Time.time + fireRate;
+			Instantiate(grenade, shotSpawn.position, shotSpawn.rotation);
+			GrenadeCounter.AddGrenade(-1);
 			
 		}
 		
@@ -93,6 +108,7 @@ public class PlayerController : MonoBehaviour {
 		if (inputName == "FlippedHorizontal")
 		{
 			StartCoroutine(NormalInput());
+			
 		}
 
 		if (speed < initialSpeed)
@@ -142,26 +158,38 @@ public class PlayerController : MonoBehaviour {
 	
 	IEnumerator NormalInput()
 	{
+		reverse.SetActive(true);
 		yield return new WaitForSeconds(5);
 		inputName = "Horizontal";
+		reverse.SetActive(false);
+		
+		
 
 	}
 	
 	public static void FlipInput()
 	{
 		inputName = "FlippedHorizontal";
+		
+		
+		
 
 	}
 
 	public static void SlowDown()
 	{
 		speed = initialSpeed * 0.2f;
+		
+
 	}
+
 
 	IEnumerator NormalSpeed()
 	{
+		slow.SetActive(true);
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
+		slow.SetActive(false);
 	}
 
 	public void StartCountDown()

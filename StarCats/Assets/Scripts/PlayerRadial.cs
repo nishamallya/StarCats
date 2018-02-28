@@ -22,6 +22,11 @@ public class PlayerRadial : MonoBehaviour
 	public float fireRate;
 	private float nextFire;
 	
+	//new additions
+	public GameObject slow;
+    public GameObject reverse;
+    public GameObject grenade;
+	
 	public GameObject radialtrap;
 	public bool canSetTrap;
 	
@@ -34,6 +39,8 @@ public class PlayerRadial : MonoBehaviour
 		tiltAngle = 0f;
 		inputName = "Horizontal";
 		canSetTrap = true;
+		slow.SetActive(false);
+		reverse.SetActive(false);
 	}
 	
 	
@@ -44,6 +51,14 @@ public class PlayerRadial : MonoBehaviour
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+		}
+		
+		if (Input.GetAxis("LeftTrigger") > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
+		{
+			nextFire = Time.time + fireRate;
+			Instantiate(grenade, shotSpawn.position, shotSpawn.rotation);
+			GrenadeCounter.AddGrenade(-1);
+			
 		}
 		
 		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
@@ -84,8 +99,10 @@ public class PlayerRadial : MonoBehaviour
 	
 	IEnumerator NormalInput()
 	{
+		reverse.SetActive(true);
 		yield return new WaitForSeconds(5);
 		inputName = "Horizontal";
+		reverse.SetActive(false);
 
 	}
 	
@@ -102,9 +119,12 @@ public class PlayerRadial : MonoBehaviour
 
 	IEnumerator NormalSpeed()
 	{
+		slow.SetActive(true);
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
+		slow.SetActive(false);
 	}
+	
 	
 	private IEnumerator Pause()
 	{

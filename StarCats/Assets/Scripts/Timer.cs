@@ -38,8 +38,7 @@ public class Timer : MonoBehaviour
 			}
 			else
 			{
-				Time.timeScale = 0.00001f;
-				StartCoroutine(Level2Screen());
+				GameOver();
 			}
 			
 		
