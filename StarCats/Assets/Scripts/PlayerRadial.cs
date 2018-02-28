@@ -10,7 +10,7 @@ public class PlayerRadial : MonoBehaviour
 
 	private float radius = 1.8f;
 	private float tiltAngle;
-	private static float speed = 0.3f;
+	private static float speed = 0.2f;
 	private static float initialSpeed;
 	private Rigidbody2D rb;
 	private static string inputName;
