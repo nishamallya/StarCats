@@ -24,7 +24,7 @@ public class BulletLevel2 : MonoBehaviour {
 		
 		bullet.position += direction / 1.8f * speed;
 
-		if (bullet.position.y >= 10)
+		if (bullet.position.y >= 6 || bullet.position.y <= -6 || bullet.position.x >= 10 || bullet.position.x <= -10) //destory bullet when it exceeds screen boundaries
 		{
 			Destroy(gameObject);
 		}

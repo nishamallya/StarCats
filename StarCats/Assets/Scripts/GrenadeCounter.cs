@@ -7,7 +7,7 @@ public class GrenadeCounter : MonoBehaviour {
 
 	public static int gCount = 0;
 	private static Text _Grenade;
-	public static int maxgrenades = 5;
+	public static int maxgrenades = 20;
 		
 	// Use this for initialization
 	internal void Start ()

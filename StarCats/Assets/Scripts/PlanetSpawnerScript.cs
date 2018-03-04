@@ -15,9 +15,9 @@ public class PlanetSpawnerScript : MonoBehaviour
 	public float randX;
 	Vector2 whereToSpawn;
 	private float spawnRate = 0.61f;
-	float nextSpawn = 0.0f;
+	float nextSpawn = 5f;
 	private GameObject[] toSpawn;
-	private int toSpawnIndex;
+	public static int toSpawnIndex;
 	
 	
     
@@ -29,7 +29,7 @@ public class PlanetSpawnerScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Time.fixedTime > nextSpawn && Time.fixedTime > 3)
+		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 52)
 		{
 			//element spawns
 			nextSpawn = Time.fixedTime + spawnRate;

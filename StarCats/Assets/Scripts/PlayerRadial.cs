@@ -42,7 +42,7 @@ public class PlayerRadial : MonoBehaviour
 		reverse = GameObject.FindGameObjectWithTag("ReverseEffect");
 		slow = GameObject.FindGameObjectWithTag("SlowEffect");
 		DeactivateEffects();
-		
+
 	}
 	
 	static void DeactivateEffects()
@@ -61,14 +61,14 @@ public class PlayerRadial : MonoBehaviour
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 		}
 		
-		/*if (Input.GetAxis("LeftTrigger") > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
+		if (Input.GetAxis("LeftTrigger") > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(grenade, shotSpawn.position, shotSpawn.rotation);
 			GrenadeCounter.AddGrenade(-1);
 			
 		}
-		*/
+		
 		
 		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
 		{
