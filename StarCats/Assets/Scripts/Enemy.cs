@@ -82,6 +82,7 @@ public class Enemy : MonoBehaviour
 			{
 			    playExplosion();
 				Destroy(gameObject);
+				ScoreManager.AddScore(2);
 			}
 			
 		}
@@ -91,6 +92,7 @@ public class Enemy : MonoBehaviour
 			playExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
+			ScoreManager.AddScore(2);
 			
 		}
 
@@ -98,6 +100,7 @@ public class Enemy : MonoBehaviour
 		{
 			playExplosion();
 			Destroy(gameObject);
+			ScoreManager.AddScore(2);
 		}
 	}
 

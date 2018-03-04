@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour {
 	private static float initialSpeed;
 	public GameObject timerpanel;
 	public float countdowntime;
-	public GameObject slow;
-	public GameObject reverse;
+	public static GameObject slow;
+	public static GameObject reverse;
 
 	//bullet controller details
 	public GameObject shot; //bullet
@@ -51,16 +51,26 @@ public class PlayerController : MonoBehaviour {
 		inputName = "Horizontal";
 		speed = 15f;
 		initialSpeed = speed;
+		reverse = GameObject.FindGameObjectWithTag("ReverseEffect");
+		slow = GameObject.FindGameObjectWithTag("SlowEffect");
+		DeactivateEffects();
+		
+		
+
+
+	}
+
+	static void DeactivateEffects()
+	{
 		slow.SetActive(false);
 		reverse.SetActive(false);
 		
-
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (Input.GetAxis("Fire3") > 0.9 && Time.fixedTime > nextFire)
+		if (Input.GetAxis("Trigger") > 0.9 && Time.fixedTime > nextFire)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
@@ -79,7 +89,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			Vector2 butt = new Vector2(0, 0);
 			Instantiate(trap,butt,Quaternion.identity);
-			StartCoroutine(ActivateTrap());
+			//StartCoroutine(ActivateTrap());
 			TrapCounter.AddTrap(-1);
 		}
 		
@@ -158,7 +168,7 @@ public class PlayerController : MonoBehaviour {
 	
 	IEnumerator NormalInput()
 	{
-		reverse.SetActive(true);
+		//reverse.SetActive(true);
 		yield return new WaitForSeconds(5);
 		inputName = "Horizontal";
 		reverse.SetActive(false);
@@ -170,23 +180,25 @@ public class PlayerController : MonoBehaviour {
 	public static void FlipInput()
 	{
 		inputName = "FlippedHorizontal";
-		
-		
-		
+		//reverse.SetActive(true);
+
+
+
+
 
 	}
 
 	public static void SlowDown()
 	{
 		speed = initialSpeed * 0.2f;
-		
+		//slow.SetActive(true);
+
 
 	}
 
-
 	IEnumerator NormalSpeed()
 	{
-		slow.SetActive(true);
+		//slow.SetActive(true);
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
 		slow.SetActive(false);

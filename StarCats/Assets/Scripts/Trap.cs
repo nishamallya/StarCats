@@ -30,7 +30,7 @@ public class Trap : MonoBehaviour
 		bottomBound = cam.ScreenToWorldPoint(new Vector2(0, 0)).y;
 		//opacity
 		//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
-		isSet = false;
+		isSet = true; //make false if click to activate
 		temp_player = FindObjectOfType<PlayerController>();
 		trapTime = 10.0f;
 		isBlinking = false;
@@ -95,20 +95,20 @@ public class Trap : MonoBehaviour
 	{
 		
 		
-		if (!isSet)
+		//if (!isSet)
 		{
 			setPosition();
 		}
 
-		if (Input.GetButtonDown("CreateTrap") && temp_player.canSetTrap == false)
+		//if (Input.GetButtonDown("CreateTrap") && temp_player.canSetTrap == false)
 		{
 			isSet = true;
 			//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-			StartCoroutine(TrapSetting());
+			//StartCoroutine(TrapSetting());
 		}
 		
 
-		if (isSet)
+		//if (isSet)
 		{
 			trapTime -= Time.fixedDeltaTime;
 
@@ -134,7 +134,7 @@ public class Trap : MonoBehaviour
 	}
 	public void Blink()
 	{
-		//GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+		GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;
 
 
 	}

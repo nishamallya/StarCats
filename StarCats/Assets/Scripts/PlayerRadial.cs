@@ -23,8 +23,8 @@ public class PlayerRadial : MonoBehaviour
 	private float nextFire;
 	
 	//new additions
-	public GameObject slow;
-    public GameObject reverse;
+	public static GameObject slow;
+    public static GameObject reverse;
     public GameObject grenade;
 	
 	public GameObject radialtrap;
@@ -39,10 +39,18 @@ public class PlayerRadial : MonoBehaviour
 		tiltAngle = 0f;
 		inputName = "Horizontal";
 		canSetTrap = true;
-		slow.SetActive(false);
-		reverse.SetActive(false);
+		reverse = GameObject.FindGameObjectWithTag("ReverseEffect");
+		slow = GameObject.FindGameObjectWithTag("SlowEffect");
+		DeactivateEffects();
+		
 	}
 	
+	static void DeactivateEffects()
+	{
+		slow.SetActive(false);
+		reverse.SetActive(false);
+		
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -53,19 +61,20 @@ public class PlayerRadial : MonoBehaviour
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 		}
 		
-		if (Input.GetAxis("LeftTrigger") > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
+		/*if (Input.GetAxis("LeftTrigger") > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(grenade, shotSpawn.position, shotSpawn.rotation);
 			GrenadeCounter.AddGrenade(-1);
 			
 		}
+		*/
 		
 		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
 		{
 			Vector2 butt = new Vector2(0, 0);
 			Instantiate(radialtrap,butt,Quaternion.identity);
-			StartCoroutine(ActivateTrap());
+			//StartCoroutine(ActivateTrap());
 			TrapCounter.AddTrap(-1);
 		}
 		
@@ -99,7 +108,7 @@ public class PlayerRadial : MonoBehaviour
 	
 	IEnumerator NormalInput()
 	{
-		reverse.SetActive(true);
+		//reverse.SetActive(true);
 		yield return new WaitForSeconds(5);
 		inputName = "Horizontal";
 		reverse.SetActive(false);
@@ -119,7 +128,7 @@ public class PlayerRadial : MonoBehaviour
 
 	IEnumerator NormalSpeed()
 	{
-		slow.SetActive(true);
+		//slow.SetActive(true);
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
 		slow.SetActive(false);

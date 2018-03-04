@@ -19,7 +19,7 @@ public class ReplayButton : MonoBehaviour {
 	{
 		TrapCounter.trapCount = 0;
 		Health.healthcount = 200;
-		ScoreManager.storageA = 500;
+		ScoreManager.storageA = 300;
 		SceneManager.LoadScene("Purchase Menu");
 		Timer.Level1Complete = false;
 

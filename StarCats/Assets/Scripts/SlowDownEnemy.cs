@@ -57,6 +57,7 @@ public class SlowDownEnemy : MonoBehaviour
 			
 			PlayerController.SlowDown();
 			ReminderManager.SlowDown();
+			PlayerController.slow.SetActive(true);
 			
 
 		}
@@ -67,6 +68,7 @@ public class SlowDownEnemy : MonoBehaviour
 			{
 				playerExplosion();
 				Destroy(gameObject);
+				ScoreManager.AddScore(2);
 			}
 			
 		}
@@ -76,7 +78,15 @@ public class SlowDownEnemy : MonoBehaviour
 			playerExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
+			ScoreManager.AddScore(2);
 			
+		}
+		
+		if (other.gameObject.CompareTag("Grenade"))
+		{
+			playerExplosion();
+			Destroy(gameObject);
+			ScoreManager.AddScore(2);
 		}
 	}
 

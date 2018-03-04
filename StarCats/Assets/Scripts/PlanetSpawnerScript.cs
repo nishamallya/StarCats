@@ -29,7 +29,7 @@ public class PlanetSpawnerScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Time.fixedTime > nextSpawn)
+		if (Time.fixedTime > nextSpawn && Time.fixedTime > 3)
 		{
 			//element spawns
 			nextSpawn = Time.fixedTime + spawnRate;

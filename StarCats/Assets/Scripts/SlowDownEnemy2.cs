@@ -32,12 +32,13 @@ public class SlowDownEnemy2 : MonoBehaviour {
 				ReminderManager.SlowDown();
 
 			}
+			
 		}
 	}
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 
-		if (other.gameObject.name == "Player")
+		if (other.gameObject.name == "Player" || other.gameObject.CompareTag("Wall"))
 		{
 			playBoltStrike();
 			Destroy(gameObject);
@@ -46,6 +47,7 @@ public class SlowDownEnemy2 : MonoBehaviour {
 				Health.AddHealth(-10);
 				PlayerRadial.SlowDown();
 				ReminderManager.SlowDown();
+				PlayerRadial.slow.SetActive(true);
 
 			}
 			
@@ -58,6 +60,7 @@ public class SlowDownEnemy2 : MonoBehaviour {
 			{
 				playExplosion();
 				Destroy(gameObject);
+				ScoreManager.AddScore(2);
 			}
 			
 		}
@@ -67,7 +70,14 @@ public class SlowDownEnemy2 : MonoBehaviour {
 			playExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
-			
+			ScoreManager.AddScore(2);
+		}
+		
+		if (other.gameObject.CompareTag("Grenade"))
+		{
+			playExplosion();
+			Destroy(gameObject);
+			ScoreManager.AddScore(2);
 		}
 	}
 	

@@ -522,6 +522,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5651e00667d484510903d37ad456bde0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1320370734 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1142093770637210, guid: 5651e00667d484510903d37ad456bde0,
+    type: 2}
+  m_PrefabInternal: {fileID: 918463660}
+--- !u!114 &1320370736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320370734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbe5aa2f5cf449b893a7fe4426f9716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 1320370737}
+--- !u!114 &1320370737 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114027931682124420, guid: 5651e00667d484510903d37ad456bde0,
+    type: 2}
+  m_PrefabInternal: {fileID: 918463660}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1491496829
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +688,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 163342723
+  randomSeed: -752904758
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -22,7 +22,7 @@ public class StartButton : MonoBehaviour {
 
 	private void PlayGame(){
 		
-			SceneManager.LoadScene("scene_001");
+			SceneManager.LoadScene("Purchase Menu");
 		
 	}
 	

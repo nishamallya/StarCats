@@ -10,6 +10,8 @@ TagManager:
   - Trap
   - Wall
   - Grenade
+  - ReverseEffect
+  - SlowEffect
   layers:
   - Default
   - TransparentFX

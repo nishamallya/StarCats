@@ -29,6 +29,7 @@ public class Enemies2 : MonoBehaviour {
 			{
 				Health.AddHealth(-10);
 			}
+			
 		}
 	}
 	private void OnTriggerEnter2D(Collider2D other)
@@ -52,6 +53,7 @@ public class Enemies2 : MonoBehaviour {
 			{
 				playExplosion();
 				Destroy(gameObject);
+				ScoreManager.AddScore(2);
 			}
 			
 		}
@@ -61,7 +63,14 @@ public class Enemies2 : MonoBehaviour {
 			playExplosion();
 			Destroy(gameObject);
 			Destroy(other.gameObject);
-			
+			ScoreManager.AddScore(2);
+		}
+		
+		if (other.gameObject.CompareTag("Grenade"))
+		{
+			playExplosion();
+			Destroy(gameObject);
+			ScoreManager.AddScore(2);
 		}
 	}
 	

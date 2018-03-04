@@ -18,6 +18,7 @@ public class Timer : MonoBehaviour
 	{
 		_TimeRemaining = GetComponent<Text>();
 		levelcomplete.SetActive(false);
+		Level1Complete = false;
 
 	}
 
@@ -31,14 +32,17 @@ public class Timer : MonoBehaviour
 		{
 			if (Level1Complete == false)
 			{
-				//SceneManager.LoadScene("Purchase Menu");
-				Time.timeScale = 0.00001f;
-				StartCoroutine(Level1Screen());
+				SceneManager.LoadScene("Purchase Menu");
+				Level1Complete = true;
+				//Time.timeScale = 0.00001f;
+				//StartCoroutine(Level1Screen());
 
 			}
 			else
 			{
-				GameOver();
+				//Time.timeScale = 0.00001f;
+				//StartCoroutine(Level2Screen());
+				//GameOver();
 			}
 			
 		
@@ -53,22 +57,22 @@ public class Timer : MonoBehaviour
 		SceneManager.LoadScene("Game Over");
 	}
 
-	IEnumerator Level1Screen()
-	{
-		levelcomplete.SetActive(true);
-		yield return new WaitForSecondsRealtime(2);
-		Level1Complete = true;
-		Time.timeScale = 1;
-		SceneManager.LoadScene("Purchase Menu");
+	//IEnumerator Level1Screen()
+	
+		//levelcomplete.SetActive(true);
+		//yield return new WaitForSeconds(2);
+		//Level1Complete = true;
+		//Time.timeScale = 1;
+		//SceneManager.LoadScene("Purchase Menu");
 		
-	}
+	
 
-	IEnumerator Level2Screen()
-	{
-		levelcomplete.SetActive(true);
-		yield return new WaitForSecondsRealtime(2);
-		Time.timeScale = 1;
-		SceneManager.LoadScene("Game Over");
-	}
+	//IEnumerator Level2Screen()
+	
+		//levelcomplete.SetActive(true);
+		//yield return new WaitForSecondsRealtime(2);
+		//Time.timeScale = 1;
+		//SceneManager.LoadScene("Game Over");
+	
 
 }
