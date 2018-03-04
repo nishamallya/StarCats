@@ -42,7 +42,6 @@ public class PlayerRadial : MonoBehaviour
 		reverse = GameObject.FindGameObjectWithTag("ReverseEffect");
 		slow = GameObject.FindGameObjectWithTag("SlowEffect");
 		DeactivateEffects();
-		PlanetSpawnerScript.toSpawnIndex = 0;
 
 	}
 	

@@ -28,8 +28,6 @@ public class RadialTrap : MonoBehaviour {
 		initialSpeed = speed;
 		tiltAngle = 0f;
 		
-		//opacity
-		//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
 		isSet = true; //make false if activate to set
 		temp_player = FindObjectOfType<PlayerRadial>();
 		trapTime = 10.0f;
@@ -44,7 +42,7 @@ public class RadialTrap : MonoBehaviour {
 		var pos = trap.position;
 
 		
-		float horizontal = Input.GetAxisRaw("RightJoystickHorizontal") * 0.5f;
+		float horizontal = Input.GetAxisRaw("RightJoystickHorizontal") * 0.8f;
 		if( horizontal < 0.2f  && horizontal > -0.2f){
 			horizontal = 0.0f;
 		}

@@ -53,7 +53,7 @@ public class Trap : MonoBehaviour
 			trap.position = pos;
 		}
 		*/
-		float x = Input.GetAxisRaw("RightJoystickHorizontal")*0.5f;
+		float x = Input.GetAxisRaw("RightJoystickHorizontal")*0.8f;
 		
 		if( x < 0.2f  && x > -0.2f){
 			x = 0.0f;

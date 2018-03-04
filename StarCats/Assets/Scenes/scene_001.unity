@@ -472,7 +472,17 @@ Prefab:
     - target: {fileID: 114179648634233768, guid: 7d6d564971d46491985ffb40d39eb245,
         type: 2}
       propertyPath: time
-      value: 10
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956522131754492, guid: 7d6d564971d46491985ffb40d39eb245,
+        type: 2}
+      propertyPath: m_FillCenter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956522131754492, guid: 7d6d564971d46491985ffb40d39eb245,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d6d564971d46491985ffb40d39eb245, type: 2}
