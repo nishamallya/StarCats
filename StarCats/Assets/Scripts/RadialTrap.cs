@@ -44,8 +44,8 @@ public class RadialTrap : MonoBehaviour {
 		var pos = trap.position;
 
 		
-		float horizontal = Input.GetAxisRaw("RightJoystickHorizontal");
-		if( horizontal < 0.1f  && horizontal > -0.1f){
+		float horizontal = Input.GetAxisRaw("RightJoystickHorizontal") * 0.5f;
+		if( horizontal < 0.2f  && horizontal > -0.2f){
 			horizontal = 0.0f;
 		}
 		//"Horizontal");	

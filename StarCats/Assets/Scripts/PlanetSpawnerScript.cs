@@ -17,7 +17,7 @@ public class PlanetSpawnerScript : MonoBehaviour
 	private float spawnRate = 0.61f;
 	float nextSpawn = 0.0f;
 	private GameObject[] toSpawn;
-	private int toSpawnIndex;
+	public static int toSpawnIndex;
 	
 	
     

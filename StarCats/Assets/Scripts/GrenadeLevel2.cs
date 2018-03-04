@@ -6,51 +6,57 @@ public class GrenadeLevel2 : MonoBehaviour {
 
 	private Transform grenade;
 	public float speed;
-	public bool GrenadeTimer;
 	private Vector3 direction;
+	public Camera cam;
+	public GameObject explosionGO;
+	public float shake;
+	public float shakeamount = 0.3f;
+	public float decreaserate = 3;
 
 	// Use this for initialization
 	void Start ()
 	{
 
-		grenade = GetComponent<Transform>();
-		StartCoroutine(ActivateGrenade());
-		GrenadeTimer = false;
-		direction = new Vector3(transform.position.x, transform.position.y, 0f);
+		cam = FindObjectOfType<Camera>();
+		shake = 1.2f;
+        
+		Collider2D[] enemiesOnScreen = Physics2D.OverlapBoxAll(cam.ScreenToWorldPoint(new Vector2(Screen.width/2f, Screen.height/2f)), 
+			new Vector2(30, 12), 0); //rough equivalent of screen size
+        
+		for (int i = 0; i < enemiesOnScreen.Length; i++)
+		{
+			if (enemiesOnScreen[i].gameObject.CompareTag("Enemy"))
+			{
+				Destroy(enemiesOnScreen[i].gameObject);
+				playExplosion(enemiesOnScreen[i].gameObject);
+				ScoreManager.AddScore(2);
+                
+			}
+            
+		}
 
 	}
 
 	void FixedUpdate()
 	{
-		grenade.position += direction / 1.8f * speed;
-		
-		if (grenade.position.y >= 10)
+		if (shake > 0)
+		{
+			cam.transform.localPosition = Random.insideUnitCircle * shakeamount;
+			shake -= Time.fixedDeltaTime * decreaserate;
+
+		}
+
+		if (shake <= 0)
 		{
 			Destroy(gameObject);
 		}
+        
 	}
 
-	public void OnTriggerEnter2D(Collider2D other)
+	void playExplosion(GameObject g)
 	{
-		if (GrenadeTimer == false && other.gameObject.CompareTag("Enemy"))
-		{
-			StartCoroutine(DestructGrenade());
-			GrenadeTimer = true;
-		}
-       
-	}
-
-	IEnumerator ActivateGrenade()
-	{
-		GetComponent<Collider2D>().enabled = false;
-		yield return new WaitForSeconds(0.8f);
-		GetComponent<Collider2D>().enabled = true;
-	}
-    
-	IEnumerator DestructGrenade()
-	{
-		yield return new WaitForSeconds(0.2f);
-		Destroy(gameObject);
+		GameObject explosion = (GameObject) Instantiate(explosionGO);
+		explosion.transform.position = g.transform.position;
 	}
 }
 
