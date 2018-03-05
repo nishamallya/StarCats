@@ -14,8 +14,6 @@ public class PlayerRadial : MonoBehaviour
 	private static float initialSpeed;
 	private Rigidbody2D rb;
 	private static string inputName;
-	public GameObject timerpanel;
-	public float countdowntime;
 	
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -32,8 +30,7 @@ public class PlayerRadial : MonoBehaviour
 	
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(Pause());
-		countdowntime = 3;
+		
 		rb = GetComponent<Rigidbody2D>();
 		initialSpeed = speed;
 		tiltAngle = 0f;
@@ -132,23 +129,6 @@ public class PlayerRadial : MonoBehaviour
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
 		slow.SetActive(false);
-	}
-	
-	
-	private IEnumerator Pause()
-	{
-		Time.timeScale = 0.00001f;
-		timerpanel.SetActive(true);
-		float pauseEndTime = Time.realtimeSinceStartup + 3;
-		while (Time.realtimeSinceStartup < pauseEndTime)
-		{
-			yield return 0;
-			timerpanel.GetComponentInChildren<Text>().text = Mathf.RoundToInt(pauseEndTime - Time.realtimeSinceStartup).ToString();
-
-		}
-		
-		timerpanel.SetActive(false);
-		Time.timeScale = 1;
 	}
 
 	

@@ -29,7 +29,7 @@ public class PlanetSpawnerScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 52)
+		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 55 && Time.timeSinceLevelLoad > 0) //start spawning 3s after game starts, stop spawning 3s before game ends
 		{
 			//element spawns
 			nextSpawn = Time.fixedTime + spawnRate;
