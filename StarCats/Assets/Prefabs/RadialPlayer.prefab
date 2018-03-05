@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 60223919659037084}
   m_Layer: 0
   m_Name: RadialPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,13 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed45fc930dc814afd852863c3bfd1cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerpanel: {fileID: 0}
-  countdowntime: 0
   shot: {fileID: 1256432361240768, guid: b5554159924cd47209d921302e32c762, type: 2}
   shotSpawn: {fileID: 4933070912204048}
-  fireRate: 0.2
-  slow: {fileID: 0}
-  reverse: {fileID: 0}
   grenade: {fileID: 0}
   radialtrap: {fileID: 1361564784116302, guid: 6d4b5760ab3fc48cca7f777682542913, type: 2}
   canSetTrap: 0

@@ -5,7 +5,9 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
 	public GameObject planetA;
-
+	public GameObject speedUp;
+	public GameObject healthBoost;
+	public GameObject doublePoints;
 	public GameObject enemies;
 	public GameObject FlipEnemy;
 	public GameObject SlowDownEnemy;
@@ -111,6 +113,24 @@ public class Spawner : MonoBehaviour {
 				toSpawn[choice] = SlowDownEnemy;
 			}
 			
+		}
+
+		for (int i = 0; i < 3; i++)
+		{
+			choice = Random.Range(0, 90);
+			toSpawn[choice] = speedUp;
+		}
+		
+		for (int i = 0; i < 3; i++)
+		{
+			choice = Random.Range(0, 90);
+			toSpawn[choice] = healthBoost;
+		}
+		
+		for (int i = 0; i < 3; i++)
+		{
+			choice = Random.Range(0, 90);
+			toSpawn[choice] = doublePoints;
 		}
 
 		int j = 0;

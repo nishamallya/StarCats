@@ -9,7 +9,8 @@ public class ScoreManager : MonoBehaviour
 
 	public static int storageA = 300;
 	private static Text _AScore;
-		
+	public static int multiplier = 1;
+
 	// Use this for initialization
 	internal void Start ()
 	{
@@ -17,9 +18,17 @@ public class ScoreManager : MonoBehaviour
 		UpdateScore();
 	}
 
+	private void Update()
+	{
+		if (multiplier != 1)
+		{
+			StartCoroutine(ResetMultiplier());
+		}
+	}
+
 	public static void AddScore (int value)
 	{
-		storageA += value;
+		storageA += value * multiplier;
 		UpdateScore();
 	}
 
@@ -33,5 +42,12 @@ public class ScoreManager : MonoBehaviour
 	{
 		_AScore.text = "Points: " + storageA;
 
+	}
+
+	IEnumerator ResetMultiplier()
+	{
+		//slow.SetActive(true);
+		yield return new WaitForSeconds(8);
+		multiplier = 1;
 	}
 }

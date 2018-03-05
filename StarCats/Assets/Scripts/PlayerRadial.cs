@@ -17,8 +17,9 @@ public class PlayerRadial : MonoBehaviour
 	
 	public GameObject shot;
 	public Transform shotSpawn;
-	public float fireRate;
+	public static float fireRate;
 	private float nextFire;
+	public static float initialFireRate;
 	
 	//new additions
 	public static GameObject slow;
@@ -36,6 +37,8 @@ public class PlayerRadial : MonoBehaviour
 		tiltAngle = 0f;
 		inputName = "Horizontal";
 		canSetTrap = true;
+		fireRate = 0.2f;
+		initialFireRate = fireRate;
 		reverse = GameObject.FindGameObjectWithTag("ReverseEffect");
 		slow = GameObject.FindGameObjectWithTag("SlowEffect");
 		DeactivateEffects();
@@ -117,10 +120,16 @@ public class PlayerRadial : MonoBehaviour
 		inputName = "FlippedHorizontal";
 
 	}
+	public static void SpeedUp()
+	{
+		speed = initialSpeed * 1.8f;
+		fireRate = 0.12f;
+	}
 
 	public static void SlowDown()
 	{
 		speed = initialSpeed * 0.2f;
+		fireRate = initialFireRate;
 	}
 
 	IEnumerator NormalSpeed()
@@ -128,6 +137,7 @@ public class PlayerRadial : MonoBehaviour
 		//slow.SetActive(true);
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
+		fireRate = initialFireRate;
 		slow.SetActive(false);
 	}
 

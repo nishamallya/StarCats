@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Coin : MonoBehaviour {
-	
+public class DoublePoints2 : MonoBehaviour {
+
 	private float speed = 0.025f;
 
 	private Vector3 direction;
@@ -28,12 +29,13 @@ public class Coin : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		
-		if (other.gameObject.CompareTag("Player"))
+		if (other.gameObject.name == "Player")
 		{
 
 			Destroy(gameObject);
-			ScoreManager.AddScore(10);
-	
+			ScoreManager.multiplier = 2;
+			ReminderManager.ScoreBoost();
+			
 		}
 
 		
