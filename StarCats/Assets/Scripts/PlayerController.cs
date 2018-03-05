@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	public bool canSetTrap;
 	private static string inputName;
 	private static float initialSpeed;
+	private static float initialFireRate;
 
 	public static GameObject slow;
 	public static GameObject reverse;
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject shot; //bullet
 	public GameObject grenade;
 	public Transform shotSpawn;
-	public float fireRate;
+	public static float fireRate;
 	private float nextFire;
 	
 	
@@ -49,9 +50,12 @@ public class PlayerController : MonoBehaviour {
 		inputName = "Horizontal";
 		speed = 15f;
 		initialSpeed = speed;
+		fireRate = 0.2f;
+		initialFireRate = fireRate;
 		reverse = GameObject.FindGameObjectWithTag("ReverseEffect");
 		slow = GameObject.FindGameObjectWithTag("SlowEffect");
 		DeactivateEffects();
+		
 		
 		
 
@@ -182,13 +186,22 @@ public class PlayerController : MonoBehaviour {
 	public static void SlowDown()
 	{
 		speed = initialSpeed * 0.2f;
+		fireRate = initialFireRate;
 
+	}
+	
+	
+	public static void SpeedUp()
+	{
+		speed = initialSpeed * 1.8f;
+		fireRate = 0.12f;
 	}
 
 	IEnumerator NormalSpeed()
 	{
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
+		fireRate = initialFireRate;
 		slow.SetActive(false);
 	}
 

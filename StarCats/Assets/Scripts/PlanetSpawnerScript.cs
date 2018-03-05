@@ -7,8 +7,9 @@ public class PlanetSpawnerScript : MonoBehaviour
 
 	
 	public GameObject planetA;
-	public GameObject planetB;
-	public GameObject planetC;
+	public GameObject speedUp;
+	public GameObject healthBoost;
+	public GameObject doublePoints;
 	public GameObject enemies;
 	public GameObject FlipEnemy;
 	public GameObject SlowDownEnemy;
@@ -29,7 +30,7 @@ public class PlanetSpawnerScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 55 && Time.timeSinceLevelLoad > 0) //start spawning 3s after game starts, stop spawning 3s before game ends
+		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 58 && toSpawnIndex < 90) //start spawning 3s after game starts, stop spawning 3s before game ends
 		{
 			//element spawns
 			nextSpawn = Time.fixedTime + spawnRate;
@@ -78,6 +79,24 @@ public class PlanetSpawnerScript : MonoBehaviour
 				toSpawn[choice] = SlowDownEnemy;
 			}
 			
+		}
+
+		for (int i = 0; i < 2; i++)
+		{
+			choice = Random.Range(0, 90);
+			toSpawn[choice] = speedUp;
+		}
+		
+		for (int i = 0; i < 2; i++)
+		{
+			choice = Random.Range(0, 90);
+			toSpawn[choice] = healthBoost;
+		}
+		
+		for (int i = 0; i < 2; i++)
+		{
+			choice = Random.Range(0, 90);
+			toSpawn[choice] = doublePoints;
 		}
 
 		int j = 0;

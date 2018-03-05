@@ -52,8 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetA: {fileID: 1443289283727702, guid: 199278e2c2205407bb3d0f9f0e7ac2a2, type: 2}
-  planetB: {fileID: 1724975884135638, guid: e22bb66b3475e48a4955b3a62cbe7459, type: 2}
-  planetC: {fileID: 1019289814725510, guid: 523560ddbdc7c45afb51b4d845f2b82c, type: 2}
+  speedUp: {fileID: 1443289283727702, guid: 6ce08e6305dfc4d9b9e9789acbb62f86, type: 2}
+  healthBoost: {fileID: 1443289283727702, guid: d9bf67f81c1dc49b8a5d9c9fb160a3db,
+    type: 2}
+  doublePoints: {fileID: 1443289283727702, guid: 56036f00776334713a6b11278e512c03,
+    type: 2}
   enemies: {fileID: 1147515598473504, guid: f3e49db6e72a947e596066d6cfa27e8a, type: 2}
+  FlipEnemy: {fileID: 1147515598473504, guid: 0865b4571bee9410284c8d43bfda415d, type: 2}
+  SlowDownEnemy: {fileID: 1147515598473504, guid: ae6b9173dfb934814b60d82219b56a68,
+    type: 2}
   randX: 0
-  spawnRate: 2

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour {
-	
+public class SpeedUp2 : MonoBehaviour {
+
 	private float speed = 0.025f;
 
 	private Vector3 direction;
@@ -24,19 +24,17 @@ public class Coin : MonoBehaviour {
 			Destroy(gameObject);
 		}
 	}
-	
+
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		
-		if (other.gameObject.CompareTag("Player"))
+
+		if (other.gameObject.name == "Player")
 		{
 
 			Destroy(gameObject);
-			ScoreManager.AddScore(10);
-	
-		}
+			PlayerRadial.SpeedUp();
+			ReminderManager.SpeedBoost();
 
-		
-		
+		}
 	}
 }

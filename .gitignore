@@ -35,3 +35,5 @@ sysinfo.txt
 *.xml
 *.xml
 *.xml
+.DS_Store
+*.xml

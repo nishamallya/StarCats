@@ -12,6 +12,8 @@ TagManager:
   - Grenade
   - ReverseEffect
   - SlowEffect
+  - MultiplierEffect
+  - Boost
   layers:
   - Default
   - TransparentFX
