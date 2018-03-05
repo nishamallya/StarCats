@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 52) //55 + countdown time
+		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 55 && Time.timeSinceLevelLoad > 1) //start spawning after countdown, stop spawning 3 seconds before level ends
 		{
 			spawnPos = Random.Range(1, 5);
 			//Up

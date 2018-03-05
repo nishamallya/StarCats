@@ -12,12 +12,18 @@ public class Timer : MonoBehaviour
 	private Text _TimeRemaining;
 	public static bool Level1Complete = false;
 	public GameObject levelcomplete;
+	public GameObject PauseMenu;
+	public GameObject timerpanel;
+	public float countdowntime;
 		
 	// Use this for initialization
 	internal void Start ()
 	{
 		_TimeRemaining = GetComponent<Text>();
 		levelcomplete.SetActive(false);
+		PauseMenu.SetActive(false);
+		countdowntime = 3;
+		StartCoroutine(Pause());
 
 	}
 
@@ -25,37 +31,45 @@ public class Timer : MonoBehaviour
 	private void FixedUpdate()
 	{
 
+		
 		if (time >= 0)
 		{
 			time -= Time.fixedDeltaTime;
+			_TimeRemaining.text = "Time Remaining: " + time.ToString("f0");
 		}
-		_TimeRemaining.text = "Time Remaining: " + time.ToString("f0");
 
 		if (time <= 0)
 		{
 			if (Level1Complete == false)
 			{
-				//SceneManager.LoadScene("Purchase Menu");
-				//Level1Complete = true;
-				//Time.timeScale = 0.00001f;
 				Level1Complete = true;
 				StartCoroutine(Level1Screen());
-
 			}
 			else
 			{
-				//Time.timeScale = 0.00001f;
 				StartCoroutine(Level2Screen());
-				//GameOver();
 			}
-			
-		
-			
+				
 		}
 		
-
 	}
 
+	private void Update()
+	{
+		if (Input.GetButtonDown("Start") && timerpanel.activeSelf == false) 
+		{
+			if (PauseMenu.activeSelf)
+			{
+				PauseMenu.SetActive(false);
+				Time.timeScale = 1f;
+			}
+			else
+			{
+				PauseMenu.SetActive(true);
+				Time.timeScale = 0.0001f;
+			}
+		}
+	}
 	public void GameOver()
 	{
 		SceneManager.LoadScene("Game Over");
@@ -79,6 +93,24 @@ public class Timer : MonoBehaviour
 		//Time.timeScale = 1;
 		SceneManager.LoadScene("Game Over");
 	}
+
+	private IEnumerator Pause()
+	{
+		Time.timeScale = 0.00001f;
+		timerpanel.SetActive(true);
+		float pauseEndTime = Time.realtimeSinceStartup + 3;
+		while (Time.realtimeSinceStartup < pauseEndTime)
+		{
+			yield return 0;
+			timerpanel.GetComponentInChildren<Text>().text = Mathf.RoundToInt(pauseEndTime - Time.realtimeSinceStartup).ToString();
+
+		}
+		
+		timerpanel.SetActive(false);
+		Time.timeScale = 1;
+	}
+
+	
 	
 		
 	

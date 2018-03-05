@@ -19,8 +19,7 @@ public class PlayerController : MonoBehaviour {
 	public bool canSetTrap;
 	private static string inputName;
 	private static float initialSpeed;
-	public GameObject timerpanel;
-	public float countdowntime;
+
 	public static GameObject slow;
 	public static GameObject reverse;
 
@@ -40,8 +39,7 @@ public class PlayerController : MonoBehaviour {
 	void Start ()
 
 	{
-		StartCoroutine(Pause());
-		countdowntime = 3;
+
 		Screen.fullScreen = true;
 		player = GetComponent<Transform>();
 		rb = GetComponent<Rigidbody2D>();
@@ -168,22 +166,15 @@ public class PlayerController : MonoBehaviour {
 	
 	IEnumerator NormalInput()
 	{
-		//reverse.SetActive(true);
 		yield return new WaitForSeconds(5);
 		inputName = "Horizontal";
-		reverse.SetActive(false);
-		
-		
+		reverse.SetActive(false);		
 
 	}
 	
 	public static void FlipInput()
 	{
 		inputName = "FlippedHorizontal";
-		//reverse.SetActive(true);
-
-
-
 
 
 	}
@@ -191,39 +182,14 @@ public class PlayerController : MonoBehaviour {
 	public static void SlowDown()
 	{
 		speed = initialSpeed * 0.2f;
-		//slow.SetActive(true);
-
 
 	}
 
 	IEnumerator NormalSpeed()
 	{
-		//slow.SetActive(true);
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
 		slow.SetActive(false);
 	}
 
-	public void StartCountDown()
-	{
-		timerpanel.SetActive(true);
-		countdowntime -= Time.realtimeSinceStartup;
-
-	}
-	
-	private IEnumerator Pause()
-	{
-		Time.timeScale = 0.00001f;
-		timerpanel.SetActive(true);
-		float pauseEndTime = Time.realtimeSinceStartup + 3;
-		while (Time.realtimeSinceStartup < pauseEndTime)
-		{
-			yield return 0;
-			timerpanel.GetComponentInChildren<Text>().text = Mathf.RoundToInt(pauseEndTime - Time.realtimeSinceStartup).ToString();
-
-		}
-		
-		timerpanel.SetActive(false);
-		Time.timeScale = 1;
-	}
 }
