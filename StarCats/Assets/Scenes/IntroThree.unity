@@ -161,7 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 76098938}
-  childtext: {fileID: 0}
 --- !u!114 &76098938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,7 +620,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 424858198}
-  childtext: {fileID: 0}
 --- !u!114 &424858198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,7 +655,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 424858199}
   m_OnClick:
     m_PersistentCalls:
@@ -2331,6 +2329,16 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224601858169689882, guid: c57bd44f3099e4446b1147963e16624e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224601858169689882, guid: c57bd44f3099e4446b1147963e16624e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c57bd44f3099e4446b1147963e16624e, type: 2}
   m_IsPrefabParent: 0
@@ -2747,7 +2755,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1555765574}
-  childtext: {fileID: 0}
 --- !u!114 &1555765574
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2460,6 +2460,16 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224601858169689882, guid: c57bd44f3099e4446b1147963e16624e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224601858169689882, guid: c57bd44f3099e4446b1147963e16624e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c57bd44f3099e4446b1147963e16624e, type: 2}
   m_IsPrefabParent: 0
