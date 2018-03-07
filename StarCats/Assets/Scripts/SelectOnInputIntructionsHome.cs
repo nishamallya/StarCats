@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SelectOnInput : MonoBehaviour
-{
+public class SelectOnInputIntructionsHome : MonoBehaviour {
 
 	public EventSystem eventSystem;
 	public GameObject selectedObject;
@@ -28,7 +27,7 @@ public class SelectOnInput : MonoBehaviour
 		}
 		
 	}
-
+	
 	private void OnEnable()
 	{
 		eventSystem.SetSelectedGameObject(null);
