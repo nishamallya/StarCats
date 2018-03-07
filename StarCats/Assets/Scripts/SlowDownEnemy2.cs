@@ -56,12 +56,11 @@ public class SlowDownEnemy2 : MonoBehaviour {
 
 		if (other.gameObject.CompareTag("Trap"))
 		{
-			if (other.gameObject.GetComponent<RadialTrap>().isSet)
-			{
+
 				playExplosion();
 				Destroy(gameObject);
 				ScoreManager.AddScore(2);
-			}
+			
 			
 		}
 		

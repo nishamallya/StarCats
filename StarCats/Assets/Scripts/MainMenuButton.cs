@@ -20,5 +20,10 @@ public class MainMenuButton : MonoBehaviour {
 		Time.timeScale = 1;
 		//GetComponentInParent<PauseMenu>().gameObject.SetActive(false);
 		SceneManager.LoadScene("MainMenu");
+		ScoreManager.storageA = 300;
+		GrenadeCounter.gCount = 0;
+		TrapCounter.trapCount = 0;
+		Health.healthcount = 200;
+		Timer.Level1Complete = false;
 	}
 }
