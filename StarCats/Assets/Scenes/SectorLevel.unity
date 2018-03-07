@@ -666,8 +666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: -5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &498147085
 GameObject:
@@ -1771,8 +1771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 1256432361240768, guid: fe2c2230249b5432192cbbb62e4f9552, type: 2}
   shotSpawn: {fileID: 1464073290}
-  grenade: {fileID: 0}
-  radialtrap: {fileID: 1361564784116302, guid: 6d4b5760ab3fc48cca7f777682542913, type: 2}
+  grenade: {fileID: 1097062883824568, guid: 1385f8481c930471d9ecab167ebb819b, type: 2}
+  sectortrap: {fileID: 1283893703624438, guid: 2f6e254d755c443e986d230a3c279603, type: 2}
   canSetTrap: 0
 --- !u!1 &1487669024
 GameObject:
