@@ -1933,11 +1933,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You have almost defeated the entire Nosliw clan. One more wave and your
-    planet will be safe!
+  m_Text: 'The Nosliw''s are deploying more backup!
 
 
-    Choose your weapons wisely!'
+    Your allies, however, are sending health boosts towards you!
+
+
+    Collect the red particles to boost your health as you fight the Nosliws!'
 --- !u!222 &1164282307
 CanvasRenderer:
   m_ObjectHideFlags: 0
