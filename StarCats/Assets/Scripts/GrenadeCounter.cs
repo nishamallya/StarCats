@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GrenadeCounter : MonoBehaviour {
 
-	public static int gCount = 5;
+	public static int gCount = 0;
 	private static Text _Grenade;
 	public static int maxgrenades = 20;
 	public string currentscene;

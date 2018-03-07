@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GrenadeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class GrenadeButton : MonoBehaviour
 {
 	public Button btn;
 	public static int grenadeprice = 50;
-	public GameObject childtext;
+	//public GameObject childtext;
 
 
 	//public bool HasGun = false;
@@ -17,7 +17,6 @@ public class GrenadeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	void Start ()
 	{
 		btn = GetComponent<Button>();
-		childtext.SetActive(false);
 
 		btn.onClick.AddListener(AddGun);
 		if (ScoreManager.storageA < grenadeprice)
@@ -45,16 +44,5 @@ public class GrenadeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
-	{
-		if (btn.interactable)
-		{
-			childtext.SetActive(true);
-		}
-	}
 
-	public void OnPointerExit(PointerEventData eventData)
-	{
-		childtext.SetActive(false);
-	}
 }

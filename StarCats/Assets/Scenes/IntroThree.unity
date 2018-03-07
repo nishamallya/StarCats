@@ -1028,13 +1028,12 @@ RectTransform:
 --- !u!114 &641779017
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114335349294548640, guid: 600dbe5b7a89b4efc8877d6cffb968ea,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 641779015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d887d3b0e0941d0874de5d8a3bd165, type: 3}
+  m_Script: {fileID: 11500000, guid: f6b729ac9636c4a649366c8102f74398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 641779018}
@@ -2500,7 +2499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 879444167}
-  selectedObject: {fileID: 76098935}
+  selectedObject: {fileID: 1555765571}
 --- !u!114 &1408538831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3239,7 +3238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 879444167}
-  selectedObject: {fileID: 0}
+  selectedObject: {fileID: 1676649597}
 --- !u!114 &1968760333
 MonoBehaviour:
   m_ObjectHideFlags: 0
