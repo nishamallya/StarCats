@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1639924827}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &113580722
@@ -1293,7 +1293,8 @@ Prefab:
       propertyPath: m_Name
       value: WeaponsButton
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114466181359363484, guid: 5651e00667d484510903d37ad456bde0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5651e00667d484510903d37ad456bde0, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &238669496 stripped
@@ -1311,6 +1312,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1297806899120028, guid: 5651e00667d484510903d37ad456bde0,
     type: 2}
   m_PrefabInternal: {fileID: 238669495}
+--- !u!114 &238669501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238669500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f658fbb55a3f45d3bd5b545a5e211f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 113580721}
+  selectedObject: {fileID: 238669499}
 --- !u!1001 &264726255
 Prefab:
   m_ObjectHideFlags: 0
@@ -2030,7 +2044,7 @@ Prefab:
     - target: {fileID: 224518752117824606, guid: 5651e00667d484510903d37ad456bde0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224963931986434384, guid: 5651e00667d484510903d37ad456bde0,
         type: 2}
@@ -2050,7 +2064,7 @@ Prefab:
     - target: {fileID: 224963931986434384, guid: 5651e00667d484510903d37ad456bde0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -400
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224196551232840312, guid: 5651e00667d484510903d37ad456bde0,
         type: 2}
@@ -2070,7 +2084,7 @@ Prefab:
     - target: {fileID: 224196551232840312, guid: 5651e00667d484510903d37ad456bde0,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -600
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114242807349866820, guid: 5651e00667d484510903d37ad456bde0,
         type: 2}
@@ -2399,6 +2413,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1000247949
@@ -2455,7 +2480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1039191160
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2480,18 +2505,16 @@ RectTransform:
 --- !u!114 &1039191161
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114466181359363484, guid: 5651e00667d484510903d37ad456bde0,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1039191159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6102c18bbf6d84e219b6c0ab6efefe5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fb4b5ffe9bf84d64a90c563c215c1d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 113580721}
-  selectedObject: {fileID: 0}
-  currentbutton: {fileID: 0}
+  selectedObject: {fileID: 943786748}
 --- !u!114 &1039191162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,18 +2768,16 @@ RectTransform:
 --- !u!114 &1129137601
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114466181359363484, guid: 5651e00667d484510903d37ad456bde0,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1129137599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6102c18bbf6d84e219b6c0ab6efefe5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4981fda0965f74b0c99ddb97368611d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 113580721}
-  selectedObject: {fileID: 0}
-  currentbutton: {fileID: 0}
+  selectedObject: {fileID: 51116859}
 --- !u!114 &1129137602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7166,7 +7187,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 850c624602bf740709040ebf2e8ed26f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 406fa9af8cbe54e2f976ca30246e2823, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7277,18 +7298,16 @@ GameObject:
 --- !u!114 &2095401651
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114466181359363484, guid: 5651e00667d484510903d37ad456bde0,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2095401650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6102c18bbf6d84e219b6c0ab6efefe5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4561c942edda04cd2968cfb2a6dc5a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 113580721}
-  selectedObject: {fileID: 0}
-  currentbutton: {fileID: 0}
+  selectedObject: {fileID: 32360927}
 --- !u!114 &2095401652
 MonoBehaviour:
   m_ObjectHideFlags: 0

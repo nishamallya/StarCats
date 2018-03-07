@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SelectOnInput : MonoBehaviour
-{
+public class SelectOnInputPower : MonoBehaviour {
 
 	public EventSystem eventSystem;
 	public GameObject selectedObject;
@@ -20,15 +19,15 @@ public class SelectOnInput : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 
+		
 		if (Input.GetAxisRaw("Vertical") != 0 && buttonSelected == false)
 		{
 			eventSystem.SetSelectedGameObject(selectedObject);
-			//currentbutton = eventSystem.currentSelectedGameObject;
 			buttonSelected = true;
 		}
 		
 	}
-
+	
 	private void OnEnable()
 	{
 		eventSystem.SetSelectedGameObject(null);
@@ -36,7 +35,8 @@ public class SelectOnInput : MonoBehaviour
 	}
 
 
-	void onDisable()
+
+	public void onDisable()
 	{
 		buttonSelected = false;
 	}
