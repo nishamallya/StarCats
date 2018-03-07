@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GrenadeButton : MonoBehaviour
 {
 	public Button btn;
-	public static int grenadeprice = 50;
+	public static int grenadeprice = 100;
 	//public GameObject childtext;
 
 
