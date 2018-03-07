@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies3 : MonoBehaviour {
-
+public class SlowDownEnemy3 : MonoBehaviour {
+	
 	public GameObject explosionGO;
 	public GameObject boltStrikeGO;
 
@@ -28,6 +28,8 @@ public class Enemies3 : MonoBehaviour {
 			if (Health.healthcount > 0)
 			{
 				Health.AddHealth(-10);
+				PlayerSector.SlowDown();
+				ReminderManager.SlowDown();
 			}
 			
 		}
@@ -42,6 +44,9 @@ public class Enemies3 : MonoBehaviour {
 			if (Health.healthcount > 0)
 			{
 				Health.AddHealth(-10);
+				PlayerSector.SlowDown();
+				ReminderManager.SlowDown();
+				PlayerSector.slow.SetActive(true);
 			}
 			
 
@@ -49,7 +54,7 @@ public class Enemies3 : MonoBehaviour {
 
 		if (other.gameObject.CompareTag("Trap"))
 		{
-			if (other.gameObject.GetComponent<RadialTrap>().isSet)
+			//if (other.gameObject.GetComponent<RadialTrap>().isSet)
 			{
 				playExplosion();
 				Destroy(gameObject);

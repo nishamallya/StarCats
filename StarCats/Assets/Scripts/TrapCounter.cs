@@ -8,12 +8,17 @@ public class TrapCounter : MonoBehaviour {
 	public static int trapCount = 5;
 	private static Text _Trap;
 	public static int maxtraps = 5;
+	public string currentscene;
 		
 	// Use this for initialization
 	internal void Start ()
 	{
 		_Trap = GetComponent<Text>();
 		UpdateTrap();
+		if ((currentscene == "LevelOne"))
+		{
+			_Trap.enabled = false;
+		}
 	}
 
 	public static void AddTrap (int value)

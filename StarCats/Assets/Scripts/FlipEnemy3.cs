@@ -54,7 +54,7 @@ public class FlipEnemy3 : MonoBehaviour {
 
 		if (other.gameObject.CompareTag("Trap"))
 		{
-			if (other.gameObject.GetComponent<RadialTrap>().isSet)
+			//if (other.gameObject.GetComponent<RadialTrap>().isSet)
 			{
 				playExplosion();
 				Destroy(gameObject);

@@ -11,11 +11,13 @@ public class ScoreManager : MonoBehaviour
 	private static Text _AScore;
 	public static int multiplier = 1;
 
+
 	// Use this for initialization
 	internal void Start ()
 	{
 		_AScore = GetComponent<Text>();
 		UpdateScore();
+
 	}
 
 	private void Update()
@@ -47,7 +49,8 @@ public class ScoreManager : MonoBehaviour
 	IEnumerator ResetMultiplier()
 	{
 		//slow.SetActive(true);
-		yield return new WaitForSeconds(8);
+		yield return new WaitForSeconds(5);
 		multiplier = 1;
+		
 	}
 }
