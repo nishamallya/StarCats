@@ -22,6 +22,7 @@ public class ReplayButton : MonoBehaviour {
 		ScoreManager.storageA = 300;
 		SceneManager.LoadScene("Purchase Menu");
 		Timer.Level1Complete = false;
+		GrenadeCounter.gCount = 0;
 
 	}
 }

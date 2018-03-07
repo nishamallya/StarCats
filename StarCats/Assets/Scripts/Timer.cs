@@ -31,7 +31,6 @@ public class Timer : MonoBehaviour
 	private void FixedUpdate()
 	{
 
-		
 		if (time >= 0)
 		{
 			time -= Time.fixedDeltaTime;
