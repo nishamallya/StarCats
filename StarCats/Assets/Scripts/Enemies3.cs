@@ -7,7 +7,7 @@ public class Enemies3 : MonoBehaviour {
 	public GameObject explosionGO;
 	public GameObject boltStrikeGO;
 
-	private float speed = 0.025f;
+	private float speed = 0.045f;
 
 	private Vector3 direction;
 	private float distance;
