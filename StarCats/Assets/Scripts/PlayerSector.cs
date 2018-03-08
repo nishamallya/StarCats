@@ -15,6 +15,7 @@ public class PlayerSector : MonoBehaviour {
 
 	private float maxX = 5.5f;
 	private float minX = -5.5f;
+	private float maxAngle;
 
 	
 	public GameObject shot;
@@ -45,6 +46,7 @@ public class PlayerSector : MonoBehaviour {
 		slow = GameObject.FindGameObjectWithTag("SlowEffect");
 		DeactivateEffects();
 
+		maxAngle = Mathf.Asin(maxX / radius);
 
 	}
 	
@@ -85,22 +87,20 @@ public class PlayerSector : MonoBehaviour {
 		Vector2 movement = new Vector2(horizontal, 0.0f);
 		var angle = ((horizontal * speed / (2 * radius * Mathf.PI))) * 2 * Mathf.PI;
 		var toDegree = 360f / (2 * Mathf.PI);
+		var prevAngle = tiltAngle;
 		tiltAngle += angle;
-		var xPos = Mathf.Sin(tiltAngle) * radius;
-		var yPos = -11f + Mathf.Cos(tiltAngle) * radius;
-		if (xPos > minX && xPos < maxX)
+		if (tiltAngle > maxAngle || tiltAngle < -maxAngle)
 		{
+			tiltAngle = prevAngle;
+		}
+		else
+		{
+			var xPos = Mathf.Sin(tiltAngle) * radius;
+			var yPos = -11f + Mathf.Cos(tiltAngle) * radius;
+		
 			transform.position = new Vector3(xPos, yPos, 0f);
 			transform.Rotate(-Vector3.forward * angle * toDegree);
 		}
-
-		
-		
-				
-
-		
-		
-		
 		
 		
 
