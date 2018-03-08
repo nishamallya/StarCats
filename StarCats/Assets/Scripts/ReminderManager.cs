@@ -29,8 +29,16 @@ public class ReminderManager : MonoBehaviour {
 			}
 		}
 
-		_multiplier.SetActive(false);
-		_boost.SetActive(false);
+		if (_multiplier.active)
+		{
+			_multiplier.SetActive(false);
+		}
+
+		if (_boost.active)
+		{
+			_boost.SetActive(false);
+		}
+
 
 
 	}
@@ -41,7 +49,15 @@ public class ReminderManager : MonoBehaviour {
 		{
 			StartCoroutine(ReminderDisappear());
 		}
+
+		if (_multiplier.gameObject.activeInHierarchy)
+		{
+			StartCoroutine(MultiplierDisappear());
+		}
+		
+		
 	}
+	
 
 	public static void ReverseControl()
 	{
@@ -62,12 +78,6 @@ public class ReminderManager : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(2);
 		
-
-		if (_multiplier.activeSelf)
-		{
-			_multiplier.SetActive(false);
-		}
-		
 		if (_boost.activeSelf)
 		{
 			_boost.SetActive(false);
@@ -77,8 +87,15 @@ public class ReminderManager : MonoBehaviour {
 		gameObject.SetActive(false);
 		
 		
+	}
+	
+	IEnumerator MultiplierDisappear()
+	{
+		yield return new WaitForSeconds(5);
+		_multiplier.SetActive(false);
 		
 	}
+	
 	
 	public static void HealthBoost()
 	{
@@ -100,6 +117,7 @@ public class ReminderManager : MonoBehaviour {
 		_reminder.text = "Score Multiplier!";
 		_reminder.gameObject.SetActive(true);
 		_multiplier.SetActive(true);
+
 	}
 	
 	

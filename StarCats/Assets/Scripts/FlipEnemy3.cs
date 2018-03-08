@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies3 : MonoBehaviour {
+public class FlipEnemy3 : MonoBehaviour {
 
 	public GameObject explosionGO;
 	public GameObject boltStrikeGO;
 
-	private float speed = 0.025f;
+	private float speed = 0.05f;
 
 	private Vector3 direction;
 	private float distance;
@@ -28,6 +28,8 @@ public class Enemies3 : MonoBehaviour {
 			if (Health.healthcount > 0)
 			{
 				Health.AddHealth(-10);
+				PlayerSector.FlipInput();
+				ReminderManager.ReverseControl();
 			}
 			
 		}
@@ -42,6 +44,9 @@ public class Enemies3 : MonoBehaviour {
 			if (Health.healthcount > 0)
 			{
 				Health.AddHealth(-10);
+				PlayerSector.FlipInput();
+				ReminderManager.ReverseControl();
+				PlayerSector.reverse.SetActive(true);
 			}
 			
 
@@ -49,7 +54,7 @@ public class Enemies3 : MonoBehaviour {
 
 		if (other.gameObject.CompareTag("Trap"))
 		{
-			if (other.gameObject.GetComponent<RadialTrap>().isSet)
+			//if (other.gameObject.GetComponent<RadialTrap>().isSet)
 			{
 				playExplosion();
 				Destroy(gameObject);

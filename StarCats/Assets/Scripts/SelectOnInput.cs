@@ -8,12 +8,13 @@ public class SelectOnInput : MonoBehaviour
 
 	public EventSystem eventSystem;
 	public GameObject selectedObject;
-	public GameObject currentbutton;
 
 	private bool buttonSelected;
 	// Use this for initialization
 	void Start () {
-		
+		eventSystem = EventSystem.current;
+		eventSystem.SetSelectedGameObject(null);
+		eventSystem.SetSelectedGameObject(selectedObject);
 	}
 	
 	// Update is called once per frame
@@ -26,6 +27,12 @@ public class SelectOnInput : MonoBehaviour
 			buttonSelected = true;
 		}
 		
+	}
+
+	private void OnEnable()
+	{
+		eventSystem.SetSelectedGameObject(null);
+		eventSystem.SetSelectedGameObject(selectedObject);
 	}
 
 

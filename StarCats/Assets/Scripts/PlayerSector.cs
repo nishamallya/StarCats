@@ -28,7 +28,7 @@ public class PlayerSector : MonoBehaviour {
     public static GameObject reverse;
     public GameObject grenade;
 	
-	public GameObject radialtrap;
+	public GameObject sectortrap;
 	public bool canSetTrap;
 	
 	// Use this for initialization
@@ -76,7 +76,7 @@ public class PlayerSector : MonoBehaviour {
 		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
 		{
 			Vector2 butt = new Vector2(0, 0);
-			Instantiate(radialtrap,butt,Quaternion.identity);
+			Instantiate(sectortrap,butt,Quaternion.identity);
 			//StartCoroutine(ActivateTrap());
 			TrapCounter.AddTrap(-1);
 		}
@@ -91,8 +91,15 @@ public class PlayerSector : MonoBehaviour {
 		if (xPos > minX && xPos < maxX)
 		{
 			transform.position = new Vector3(xPos, yPos, 0f);
-			transform.Rotate (-Vector3.forward * angle * toDegree);
+			transform.Rotate(-Vector3.forward * angle * toDegree);
 		}
+
+		
+		
+				
+
+		
+		
 		
 		
 		

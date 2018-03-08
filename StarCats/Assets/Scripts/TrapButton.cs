@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TrapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class TrapButton : MonoBehaviour {
 
 	public Button btn;
 	public static int Trapprice = 50;
-	public GameObject childtext;
+	//public GameObject childtext;
 	// Use this for initialization
 	void Start ()
 	{
 		btn = GetComponent<Button>();
-		childtext.SetActive(false);
+	
 
 		
 		btn.onClick.AddListener(AddTrap);
@@ -43,16 +43,5 @@ public class TrapButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 		}
 	}
 	
-	public void OnPointerEnter(PointerEventData eventData)
-	{
-		if (btn.interactable)
-		{
-			childtext.SetActive(true);
-		}
-	}
 
-	public void OnPointerExit(PointerEventData eventData)
-	{
-		childtext.SetActive(false);
-	}
 }

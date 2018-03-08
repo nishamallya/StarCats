@@ -15,7 +15,7 @@ public class Spawner2 : MonoBehaviour {
 	private float ranY;
 	Vector2 whereToSpawn;
 	private float spawnRate = 0.61f;
-	float nextSpawn = 5f;
+	float nextSpawn = 5.0f;
 	private GameObject[] toSpawn;
 	private int toSpawnIndex;
 
@@ -30,7 +30,7 @@ public class Spawner2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 55 && Time.timeSinceLevelLoad > 1) //start spawning after countdown, stop spawning 3 seconds before level ends
+		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 55) //start spawning after countdown, stop spawning 3 seconds before level ends
 		{
 			
 			//element spawns

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowDownEnemy3 : MonoBehaviour {
-	
+public class Enemies3 : MonoBehaviour {
+
 	public GameObject explosionGO;
 	public GameObject boltStrikeGO;
 
-	private float speed = 0.025f;
+	private float speed = 0.05f;
 
 	private Vector3 direction;
 	private float distance;
@@ -28,8 +28,6 @@ public class SlowDownEnemy3 : MonoBehaviour {
 			if (Health.healthcount > 0)
 			{
 				Health.AddHealth(-10);
-				PlayerSector.SlowDown();
-				ReminderManager.SlowDown();
 			}
 			
 		}
@@ -44,9 +42,6 @@ public class SlowDownEnemy3 : MonoBehaviour {
 			if (Health.healthcount > 0)
 			{
 				Health.AddHealth(-10);
-				PlayerSector.SlowDown();
-				ReminderManager.SlowDown();
-				PlayerSector.slow.SetActive(true);
 			}
 			
 
@@ -54,7 +49,7 @@ public class SlowDownEnemy3 : MonoBehaviour {
 
 		if (other.gameObject.CompareTag("Trap"))
 		{
-			if (other.gameObject.GetComponent<RadialTrap>().isSet)
+			//if (other.gameObject.GetComponent<RadialTrap>().isSet)
 			{
 				playExplosion();
 				Destroy(gameObject);

@@ -78,12 +78,11 @@ public class Enemy : MonoBehaviour
 
 		if (other.gameObject.CompareTag("Trap"))
 		{
-			if (other.gameObject.GetComponent<Trap>().isSet)
-			{
+
 			    playExplosion();
 				Destroy(gameObject);
 				ScoreManager.AddScore(2);
-			}
+
 			
 		}
 		

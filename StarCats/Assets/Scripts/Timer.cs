@@ -31,7 +31,6 @@ public class Timer : MonoBehaviour
 	private void FixedUpdate()
 	{
 
-		
 		if (time >= 0)
 		{
 			time -= Time.fixedDeltaTime;
@@ -40,7 +39,9 @@ public class Timer : MonoBehaviour
 
 		if (time <= 0)
 		{
-			if (Level1Complete == false)
+			
+			levelcomplete.SetActive(true);
+			/*if (Level1Complete == false)
 			{
 				Level1Complete = true;
 				StartCoroutine(Level1Screen());
@@ -48,9 +49,10 @@ public class Timer : MonoBehaviour
 			else
 			{
 				StartCoroutine(Level2Screen());
-			}
+			}*/
 				
 		}
+		
 		
 	}
 
