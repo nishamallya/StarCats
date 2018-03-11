@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TrapCounter : MonoBehaviour {
 
-	public static int trapCount = 5;
+	public static int trapCount = 0;
 	private static Text _Trap;
 	public static int maxtraps = 5;
 	public string currentscene;

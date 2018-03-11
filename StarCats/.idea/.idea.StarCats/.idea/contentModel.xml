@@ -5,22 +5,14 @@
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="BulletSector.cs" t="Include" />
-        <e p="CoinSector.cs" t="Include" />
-        <e p="DoublePoints3.cs" t="Include" />
-        <e p="Enemies3.cs" t="Include" />
-        <e p="FlipEnemy3.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="Jupiter" t="Include">
             <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
-        <e p="HealthBoost3.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="UI-Default-No-Alpha.shader" t="Include" />
         </e>
-        <e p="PauseMenu.cs" t="Include" />
-        <e p="PlayerSector.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -28,7 +20,6 @@
             </e>
           </e>
         </e>
-        <e p="ReverseEffect.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ActiveStateToggler.cs" t="Include" />
           <e p="ApplicationManager.cs" t="Include" />
@@ -36,18 +27,23 @@
           <e p="Boundary.cs" t="Include" />
           <e p="BulletController.cs" t="Include" />
           <e p="BulletLevel2.cs" t="Include" />
+          <e p="BulletSector.cs" t="Include" />
           <e p="ChangeColor.cs" t="Include" />
           <e p="Coin.cs" t="Include" />
+          <e p="CoinSector.cs" t="Include" />
           <e p="Destroyer.cs" t="Include" />
           <e p="DoublePoints.cs" t="Include" />
           <e p="DoublePoints2.cs" t="Include" />
+          <e p="DoublePoints3.cs" t="Include" />
           <e p="DragMe.cs" t="Include" />
           <e p="DragPanel.cs" t="Include" />
           <e p="DropMe.cs" t="Include" />
           <e p="Enemies2.cs" t="Include" />
+          <e p="Enemies3.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="FlipEnemy.cs" t="Include" />
           <e p="FlipEnemy2.cs" t="Include" />
+          <e p="FlipEnemy3.cs" t="Include" />
           <e p="GrenadeButton.cs" t="Include" />
           <e p="GrenadeController.cs" t="Include" />
           <e p="GrenadeCounter.cs" t="Include" />
@@ -55,11 +51,16 @@
           <e p="Health.cs" t="Include" />
           <e p="HealthBoost.cs" t="Include" />
           <e p="HealthBoost2.cs" t="Include" />
+          <e p="HealthBoost3.cs" t="Include" />
           <e p="HealthButton.cs" t="Include" />
+          <e p="LevelOneSpawner.cs" t="Include" />
+          <e p="LevelThreeSpawner.cs" t="Include" />
+          <e p="LevelTwoSpawner.cs" t="Include" />
           <e p="LoadInstructions.cs" t="Include" />
           <e p="MainMenuButton.cs" t="Include" />
           <e p="PanelManager.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
+          <e p="PauseMenu.cs" t="Include" />
           <e p="PlanetA.cs" t="Include" />
           <e p="PlanetB.cs" t="Include" />
           <e p="PlanetC.cs" t="Include" />
@@ -67,34 +68,51 @@
           <e p="PlayButton.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerRadial.cs" t="Include" />
+          <e p="PlayerSector.cs" t="Include" />
           <e p="QuitButton.cs" t="Include" />
           <e p="RadialTrap.cs" t="Include" />
           <e p="ReminderManager.cs" t="Include" />
           <e p="ReplayButton.cs" t="Include" />
           <e p="ResizePanel.cs" t="Include" />
           <e p="ResumeButton.cs" t="Include" />
+          <e p="ReverseEffect.cs" t="Include" />
           <e p="RotatePlanet.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
           <e p="ScoreManager2.cs" t="Include" />
           <e p="ScoreManager3.cs" t="Include" />
           <e p="ScrollDetailTexture.cs" t="Include" />
+          <e p="SectorTrap.cs" t="Include" />
           <e p="SelectOnInput.cs" t="Include" />
+          <e p="SelectOnInputInstructionsPanel.cs" t="Include" />
+          <e p="SelectOnInputIntructionsHome.cs" t="Include" />
+          <e p="SelectOnInputPower.cs" t="Include" />
+          <e p="SelectOnInputWeapon.cs" t="Include" />
           <e p="ShowSliderValue.cs" t="Include" />
           <e p="SlowDownEnemy.cs" t="Include" />
           <e p="SlowDownEnemy2.cs" t="Include" />
+          <e p="SlowDownEnemy3.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
+          <e p="Spawner2.cs" t="Include" />
           <e p="SpeedUp.cs" t="Include" />
           <e p="SpeedUp2.cs" t="Include" />
+          <e p="SpeedUp3.cs" t="Include" />
           <e p="StartButton.cs" t="Include" />
+          <e p="StartIntroFive.cs" t="Include" />
+          <e p="StartIntroFour.cs" t="Include" />
+          <e p="StartIntroOne.cs" t="Include" />
+          <e p="StartIntroThree.cs" t="Include" />
+          <e p="StartIntroTwo.cs" t="Include" />
+          <e p="StartLevelFive.cs" t="Include" />
+          <e p="StartLevelFour.cs" t="Include" />
+          <e p="StartLevelOne.cs" t="Include" />
+          <e p="StartLevelThree.cs" t="Include" />
+          <e p="StartLevelTwo.cs" t="Include" />
           <e p="TiltWindow.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
           <e p="Trap.cs" t="Include" />
           <e p="TrapButton.cs" t="Include" />
           <e p="TrapCounter.cs" t="Include" />
         </e>
-        <e p="SlowDownEnemy3.cs" t="Include" />
-        <e p="Spawner2.cs" t="Include" />
-        <e p="SpeedUp3.cs" t="Include" />
         <e p="Unity UI Sample" t="Include">
           <e p="Textures and Sprites" t="Include">
             <e p="SF UI" t="Include">

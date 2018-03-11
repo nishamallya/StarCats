@@ -15,7 +15,7 @@ public class Spawner2 : MonoBehaviour {
 	private float ranY;
 	Vector2 whereToSpawn;
 	private float spawnRate = 0.61f;
-	float nextSpawn = 5f;
+	float nextSpawn = 5.0f;
 	private GameObject[] toSpawn;
 	private int toSpawnIndex;
 

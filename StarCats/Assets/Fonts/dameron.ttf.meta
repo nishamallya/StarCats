@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c8ebdf6197a1c4dbdb9c7e45026e41f0
+timeCreated: 1520465947
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dameron
+  fontNames:
+  - Dameron
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
