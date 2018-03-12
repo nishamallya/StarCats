@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
 		if (time >= 0)
 		{
 			time -= Time.fixedDeltaTime;
-			_TimeRemaining.text = "Time Remaining: " + time.ToString("f0");
+			_TimeRemaining.text = "Time: " + time.ToString("f0");
 		}
 
 		if (time <= 0)

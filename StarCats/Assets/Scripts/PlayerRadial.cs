@@ -27,7 +27,7 @@ public class PlayerRadial : MonoBehaviour
     public GameObject grenade;
 	
 	public GameObject radialtrap;
-	public bool canSetTrap;
+	public static bool canSetTrap;
 	
 	// Use this for initialization
 	void Start () {
@@ -76,6 +76,7 @@ public class PlayerRadial : MonoBehaviour
 			Instantiate(radialtrap,butt,Quaternion.identity);
 			//StartCoroutine(ActivateTrap());
 			TrapCounter.AddTrap(-1);
+			canSetTrap = false;
 		}
 		
 		float horizontal = Input.GetAxis(inputName); //"Horizontal");	

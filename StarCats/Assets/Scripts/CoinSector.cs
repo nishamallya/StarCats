@@ -16,7 +16,7 @@ public class CoinSector : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		transform.position -= direction / distance * speed;
 
 		if (Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y + 11f, 2)) < 8f)

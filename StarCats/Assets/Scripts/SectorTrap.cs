@@ -46,7 +46,7 @@ public class SectorTrap : MonoBehaviour {
 
 
 		float horizontal = Input.GetAxis("RightJoystickHorizontal")*2;
-		if (horizontal < 0.1f && horizontal > -0.1f)
+		if (horizontal < 0.2f && horizontal > -0.2f)
 		{
 			horizontal = 0.0f;
 		}
@@ -86,17 +86,12 @@ public class SectorTrap : MonoBehaviour {
 			if (trapTime < 0)
 			{
 				Destroy(gameObject);
+				PlayerSector.canSetTrap = true;
 			}
 		}
 	}
 
-	IEnumerator TrapSetting()
-	{
-		yield return new WaitForSeconds(0.5f);
-		temp_player.canSetTrap = true;
 
-
-	}
 	public void Blink()
 	{
 		GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;
