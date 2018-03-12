@@ -913,6 +913,10 @@ Prefab:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 879444167}
+    - target: {fileID: 1495815335124140, guid: fd331df2411fd44cd8a754cd3fbf3cfe, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114841602361526386, guid: fd331df2411fd44cd8a754cd3fbf3cfe, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fd331df2411fd44cd8a754cd3fbf3cfe, type: 2}
@@ -950,6 +954,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1169129444}
+--- !u!1 &1169129447 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1495815335124140, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1169129441}
 --- !u!1 &1251224985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,7 +1500,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1169129447}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -1580,7 +1589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1968760331
 RectTransform:
   m_ObjectHideFlags: 0
