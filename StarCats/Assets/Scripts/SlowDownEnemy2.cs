@@ -30,15 +30,18 @@ public class SlowDownEnemy2 : MonoBehaviour {
 				Health.AddHealth(-10);
 				PlayerRadial.SlowDown();
 				ReminderManager.SlowDown();
+				PlayerRadial.slow.SetActive(true);
 
 			}
 			
 		}
+		
+		
 	}
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 
-		if (other.gameObject.name == "Player" || other.gameObject.CompareTag("Wall"))
+		if (other.gameObject.name == "Player")
 		{
 			playBoltStrike();
 			Destroy(gameObject);

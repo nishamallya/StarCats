@@ -30,6 +30,7 @@ public class FlipEnemy3 : MonoBehaviour {
 				Health.AddHealth(-10);
 				PlayerSector.FlipInput();
 				ReminderManager.ReverseControl();
+				PlayerSector.reverse.SetActive(true);
 			}
 			
 		}
@@ -37,7 +38,7 @@ public class FlipEnemy3 : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 
-		if (other.gameObject.name == "Player" ||other.gameObject.CompareTag("Wall"))
+		if (other.gameObject.name == "Player")
 		{
 			playBoltStrike();
 			Destroy(gameObject);

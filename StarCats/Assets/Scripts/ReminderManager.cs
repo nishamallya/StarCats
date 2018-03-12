@@ -8,7 +8,6 @@ public class ReminderManager : MonoBehaviour {
 
 	private static Text _reminder;
 	public static GameObject _multiplier;
-	public static GameObject _boost;
 	
 	
 
@@ -22,11 +21,6 @@ public class ReminderManager : MonoBehaviour {
 			{
 				_multiplier = t.gameObject;
 			}
-			
-			if (t.gameObject.CompareTag("Boost"))
-			{
-				_boost = t.gameObject;
-			}
 		}
 
 		if (_multiplier.active)
@@ -34,10 +28,7 @@ public class ReminderManager : MonoBehaviour {
 			_multiplier.SetActive(false);
 		}
 
-		if (_boost.active)
-		{
-			_boost.SetActive(false);
-		}
+
 
 
 
@@ -78,12 +69,6 @@ public class ReminderManager : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(2);
 		
-		if (_boost.activeSelf)
-		{
-			_boost.SetActive(false);
-		}
-		
-		
 		gameObject.SetActive(false);
 		
 		
@@ -105,12 +90,12 @@ public class ReminderManager : MonoBehaviour {
 		
 	}
 	
-	public static void SpeedBoost()
+	public static void SpeedBoost() //speedup removed
 	{
 		_reminder.text = "Speed Boost!";
 		_reminder.gameObject.SetActive(true);	
-		_boost.SetActive(true);
 	}
+	
 	
 	public static void ScoreBoost()
 	{
