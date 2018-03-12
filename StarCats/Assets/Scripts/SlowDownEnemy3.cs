@@ -30,6 +30,7 @@ public class SlowDownEnemy3 : MonoBehaviour {
 				Health.AddHealth(-10);
 				PlayerSector.SlowDown();
 				ReminderManager.SlowDown();
+				PlayerSector.slow.SetActive(true);
 			}
 			
 		}

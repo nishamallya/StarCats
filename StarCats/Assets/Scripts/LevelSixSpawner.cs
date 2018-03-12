@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner2 : MonoBehaviour {
+public class LevelSixSpawner : MonoBehaviour {
 
 	public GameObject planetA;
-	public GameObject speedUp;
 	public GameObject healthBoost;
 	public GameObject doublePoints;
 	public GameObject enemies;
@@ -14,13 +13,12 @@ public class Spawner2 : MonoBehaviour {
 	public float randX;
 	private float ranY;
 	Vector2 whereToSpawn;
-	private float spawnRate = 0.61f;
-	float nextSpawn = 3.0f;
+	private float spawnRate = 0.55f;
+	float nextSpawn = 2f;
 	private GameObject[] toSpawn;
 	private int toSpawnIndex;
 
-
-	
+	private int spawnPos = 1;
     
 	// Use this for initialization
 	void Start () {
@@ -30,15 +28,45 @@ public class Spawner2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 55) //start spawning after countdown, stop spawning 3 seconds before level ends
+		if (Time.fixedTime > nextSpawn && Time.timeSinceLevelLoad < 55 && Time.timeSinceLevelLoad > 1) //start spawning after countdown, stop spawning 3 seconds before level ends
 		{
-			
-			//element spawns
-			nextSpawn = Time.fixedTime + spawnRate;
-			randX = Random.Range(-9.4f, 9.4f);
-			whereToSpawn = new Vector2(randX,transform.position.y);
+			spawnPos = Random.Range(1, 5);
+			//Up
+			if (spawnPos == 1)
+			{
+				//element spawns
+				nextSpawn = Time.fixedTime + spawnRate;
+				randX = Random.Range(-8.4f, 8.4f);
+				whereToSpawn = new Vector2(randX,transform.position.y);
 
-			
+			}
+			//Down
+			if (spawnPos == 2)
+			{
+				//element spawns
+				nextSpawn = Time.fixedTime + spawnRate;
+				randX = Random.Range(-8.4f, 8.4f);
+				whereToSpawn = new Vector2(randX,-transform.position.y);
+
+			}
+			//Left
+			if (spawnPos == 3)
+			{
+				//element spawns
+				nextSpawn = Time.fixedTime + spawnRate;
+				ranY = Random.Range(-5.8f, 5.8f);
+				whereToSpawn = new Vector2(-8.4f,ranY);
+			}
+			//Right
+			if (spawnPos == 4)
+			{
+				//element spawns
+				nextSpawn = Time.fixedTime + spawnRate;
+				ranY = Random.Range(-5.8f, 5.8f);
+				whereToSpawn = new Vector2(8.4f,ranY);
+
+
+			}
 			
 //			int choice = Random.Range(0, 8);
 //			GameObject[] planetOptions = new GameObject[] {planetA,planetA, enemies, planetB, planetC, enemies, enemies, planetB};
@@ -51,9 +79,9 @@ public class Spawner2 : MonoBehaviour {
 	
 	void WhatToSpawn()
 	{
-		toSpawn = new GameObject[90];
+		toSpawn = new GameObject[120];
 		int choice;
-		for (int i = 1; i <= 20; i++)
+		for (int i = 1; i <= 30; i++)
 		{
 			if (1 <= i && i <= 5)
 			{
@@ -82,30 +110,43 @@ public class Spawner2 : MonoBehaviour {
 				toSpawn[choice] = SlowDownEnemy;
 			}
 			
+			if (21 <= i && i <= 25)
+			{
+				choice = Random.Range(90, 120);
+				toSpawn[choice] = FlipEnemy;
+				continue;
+			}
+
+			if (26 <= i && i <= 30)
+			{
+				choice = Random.Range(90, 120);
+				toSpawn[choice] = SlowDownEnemy;
+			}
+			
 		}
 
 		for (int i = 0; i < 3; i++)
 		{
-			choice = Random.Range(0, 90);
-			toSpawn[choice] = planetA; //speedUp; need to change this
+			choice = Random.Range(0, 120);
+			toSpawn[choice] = planetA; //speedUp;
 		}
 		
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 6; i++)
 		{
-			choice = Random.Range(0, 90);
+			choice = Random.Range(0, 120);
 			toSpawn[choice] = healthBoost;
 		}
 		
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 6; i++)
 		{
-			choice = Random.Range(0, 90);
+			choice = Random.Range(0, 120);
 			toSpawn[choice] = doublePoints;
 		}
 
 		int j = 0;
-		while (j < 40)
+		while (j < 60)
 		{
-			choice = Random.Range(0, 90);
+			choice = Random.Range(0, 120);
 			if (toSpawn[choice] == null)
 			{
 				toSpawn[choice] = enemies;
@@ -113,7 +154,7 @@ public class Spawner2 : MonoBehaviour {
 			}
 		}
 
-		for (int i = 0; i < 90; i++)
+		for (int i = 0; i < 120; i++)
 		{
 			if (toSpawn[i] == null)
 			{
@@ -124,4 +165,6 @@ public class Spawner2 : MonoBehaviour {
 		}
 		
 	}
+
 }
+

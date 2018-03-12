@@ -47,7 +47,7 @@ public class Enemies2 : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 
-		if (other.gameObject.name == "Player" ||other.gameObject.CompareTag("Wall"))
+		if (other.gameObject.name == "Player")
 		{
 			playBoltStrike();
 			Destroy(gameObject);
