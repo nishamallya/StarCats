@@ -59,11 +59,8 @@
           <e p="LoadInstructions.cs" t="Include" />
           <e p="MainMenuButton.cs" t="Include" />
           <e p="PanelManager.cs" t="Include" />
-          <e p="Pause.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlanetA.cs" t="Include" />
-          <e p="PlanetB.cs" t="Include" />
-          <e p="PlanetC.cs" t="Include" />
           <e p="PlanetSpawnerScript.cs" t="Include" />
           <e p="PlayButton.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
@@ -97,21 +94,26 @@
           <e p="SpeedUp2.cs" t="Include" />
           <e p="SpeedUp3.cs" t="Include" />
           <e p="StartButton.cs" t="Include" />
+          <e p="StartGameWon.cs" t="Include" />
           <e p="StartIntroFive.cs" t="Include" />
           <e p="StartIntroFour.cs" t="Include" />
           <e p="StartIntroOne.cs" t="Include" />
+          <e p="StartIntroSix.cs" t="Include" />
           <e p="StartIntroThree.cs" t="Include" />
           <e p="StartIntroTwo.cs" t="Include" />
           <e p="StartLevelFive.cs" t="Include" />
           <e p="StartLevelFour.cs" t="Include" />
           <e p="StartLevelOne.cs" t="Include" />
+          <e p="StartLevelSix.cs" t="Include" />
           <e p="StartLevelThree.cs" t="Include" />
           <e p="StartLevelTwo.cs" t="Include" />
-          <e p="TiltWindow.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
           <e p="Trap.cs" t="Include" />
           <e p="TrapButton.cs" t="Include" />
           <e p="TrapCounter.cs" t="Include" />
+          <e p="Unused" t="Include">
+            <e p="TiltWindow.cs" t="Include" />
+          </e>
         </e>
         <e p="Unity UI Sample" t="Include">
           <e p="Textures and Sprites" t="Include">

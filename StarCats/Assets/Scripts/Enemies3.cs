@@ -16,6 +16,9 @@ public class Enemies3 : MonoBehaviour {
 	void Start () {
 		direction = new Vector3(transform.position.x, transform.position.y + 11f, 0f);
 		distance = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y + 11f, 2));
+		var angle = Mathf.Atan(transform.position.x / (transform.position.y + 11f));
+		var toDegree = 360f / (2 * Mathf.PI);
+		transform.Rotate (-Vector3.forward * angle * toDegree);
 	}
 	
 	void FixedUpdate () {
