@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 218247166}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &879444168
@@ -1714,13 +1714,12 @@ RectTransform:
 --- !u!114 &1174053227
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114841602361526386, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1174053225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247531a2d2fe34ef58adc7bd988d3b83, type: 3}
+  m_Script: {fileID: 11500000, guid: f6b729ac9636c4a649366c8102f74398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1174053228}
@@ -2407,7 +2406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6102c18bbf6d84e219b6c0ab6efefe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
+  eventSystem: {fileID: 879444167}
   selectedObject: {fileID: 218247166}
 --- !u!114 &1510428184
 MonoBehaviour:

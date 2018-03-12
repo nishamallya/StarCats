@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1169129445}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &879444168
@@ -908,7 +908,13 @@ Prefab:
       propertyPath: m_Text
       value: LEVEL 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114322913312312340, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 879444167}
+    m_RemovedComponents:
+    - {fileID: 114841602361526386, guid: fd331df2411fd44cd8a754cd3fbf3cfe, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fd331df2411fd44cd8a754cd3fbf3cfe, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1169129442 stripped
@@ -916,6 +922,34 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224389621590477092, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
     type: 2}
   m_PrefabInternal: {fileID: 1169129441}
+--- !u!1 &1169129443 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1358177562699552, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1169129441}
+--- !u!114 &1169129444 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114590255005703806, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1169129441}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1169129445 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1506788880664422, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1169129441}
+--- !u!114 &1169129446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169129443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed8e5c68a3f740aa819871ff3606456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 1169129444}
 --- !u!1 &1251224985
 GameObject:
   m_ObjectHideFlags: 0

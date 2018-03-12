@@ -327,6 +327,11 @@ Prefab:
       propertyPath: m_Text
       value: LEVEL 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114322913312312340, guid: fd331df2411fd44cd8a754cd3fbf3cfe,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 879444167}
     m_RemovedComponents:
     - {fileID: 114841602361526386, guid: fd331df2411fd44cd8a754cd3fbf3cfe, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fd331df2411fd44cd8a754cd3fbf3cfe, type: 2}
