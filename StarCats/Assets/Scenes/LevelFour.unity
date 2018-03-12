@@ -919,6 +919,34 @@ Prefab:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1783354618}
+    - target: {fileID: 114612402011901778, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_Text
+      value: '
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397519265224054, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224061678123783550, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224061678123783550, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.063923
+      objectReference: {fileID: 0}
+    - target: {fileID: 224662034673624352, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114488051308539602, guid: c4075b5d53dae49bc8a7ff655c6ad143, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c4075b5d53dae49bc8a7ff655c6ad143, type: 2}
@@ -1290,7 +1318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 320, y: 228}
+  m_AnchoredPosition: {x: 300, y: 228}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1112966931
@@ -1989,7 +2017,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time remaining: '
+  m_Text: 'Time:'
 --- !u!222 &1487669028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2023,7 +2051,7 @@ Transform:
   m_GameObject: {fileID: 1506642319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 250}
-  m_LocalScale: {x: 50, y: 50, z: 0}
+  m_LocalScale: {x: 50, y: 52, z: 0}
   m_Children: []
   m_Father: {fileID: 958256684}
   m_RootOrder: 1

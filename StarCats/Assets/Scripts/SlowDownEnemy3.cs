@@ -18,7 +18,7 @@ public class SlowDownEnemy3 : MonoBehaviour {
 		distance = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y + 11f, 2));
 	}
 	
-	void Update () {
+	void FixedUpdate () {
 		transform.position -= direction / distance * speed;
 
 		if (Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y + 11f, 2)) < 8.25f)
@@ -37,7 +37,7 @@ public class SlowDownEnemy3 : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 
-		if (other.gameObject.name == "Player")
+		if (other.gameObject.name == "Player" ||other.gameObject.CompareTag("Wall"))
 		{
 			playBoltStrike();
 			Destroy(gameObject);

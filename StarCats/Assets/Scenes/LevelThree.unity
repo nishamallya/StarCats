@@ -1106,7 +1106,6 @@ RectTransform:
   - {fileID: 1112966930}
   - {fileID: 180254939}
   - {fileID: 138532381}
-  - {fileID: 1404605470}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1156,7 +1155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 320, y: 228}
+  m_AnchoredPosition: {x: 300, y: 228}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1112966931
@@ -1338,98 +1337,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1861630405185912, guid: 5334c852f13c84ad18df6c9145a6242a,
     type: 2}
   m_PrefabInternal: {fileID: 1264204999}
---- !u!1 &1404605469
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1631535638183028, guid: 7d6d564971d46491985ffb40d39eb245,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1404605470}
-  - component: {fileID: 1404605474}
-  - component: {fileID: 1404605473}
-  - component: {fileID: 1404605471}
-  m_Layer: 5
-  m_Name: GrenadeCounter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1404605470
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224447324125297530, guid: 7d6d564971d46491985ffb40d39eb245,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404605469}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 249.99998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 958256684}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.00001, y: 228}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.50000006, y: 0.5}
---- !u!114 &1404605471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114497582819107980, guid: 7d6d564971d46491985ffb40d39eb245,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404605469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da75de7f6ba004522b31effe6449868e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentscene: 
---- !u!114 &1404605473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114542252770077858, guid: 7d6d564971d46491985ffb40d39eb245,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404605469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 7cb2912222469634ba17a77055919ea8, type: 3}
-    m_FontSize: 24
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Grenades: '
---- !u!222 &1404605474
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222784325809637404, guid: 7d6d564971d46491985ffb40d39eb245,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404605469}
 --- !u!1001 &1464073289
 Prefab:
   m_ObjectHideFlags: 0
@@ -1633,7 +1540,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time remaining: '
+  m_Text: 'Time:'
 --- !u!222 &1487669028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1821,6 +1728,31 @@ Prefab:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1783354618}
+    - target: {fileID: 114612402011901778, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Upgrade Unlocked
+
+        Nuke: Destroys all enemies on screen
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 224061678123783550, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.063923
+      objectReference: {fileID: 0}
+    - target: {fileID: 224061678123783550, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224662034673624352, guid: c4075b5d53dae49bc8a7ff655c6ad143,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114488051308539602, guid: c4075b5d53dae49bc8a7ff655c6ad143, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c4075b5d53dae49bc8a7ff655c6ad143, type: 2}
@@ -2192,7 +2124,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 47624544}
   m_HandleRect: {fileID: 0}

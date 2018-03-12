@@ -89,22 +89,14 @@ public class RadialTrap : MonoBehaviour {
 			if (trapTime < 0)
 			{
 				Destroy(gameObject);
+				PlayerRadial.canSetTrap = true;
 			}
 		}
 	}
 
-	IEnumerator TrapSetting()
-	{
-		yield return new WaitForSeconds(0.5f);
-		temp_player.canSetTrap = true;
-
-
-	}
 	public void Blink()
 	{
 		GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;
-
-
 	}
 
 }
