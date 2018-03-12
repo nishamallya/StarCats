@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +17,7 @@ public class QuitButton : MonoBehaviour {
 	
 	private void QuitGame()
 	{
-		EditorApplication.isPlaying = false; //unity editor
+		//EditorApplication.isPlaying = false; //unity editor
 		
 		Application.Quit(); //standalone
 	
