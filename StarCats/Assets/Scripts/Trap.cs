@@ -42,17 +42,7 @@ public class Trap : MonoBehaviour
 	{
 		//movements
 		var pos = trap.position;
-		/*if (Input.GetButton("TrapLeft") && pos.x > minBound)
-		{
-			pos = pos - (new Vector3(0.5f, 0.0f,0.0f));
-			trap.position = pos;
-		}
-		if (Input.GetButton("TrapRight") && pos.x < maxBound)
-		{
-			pos = pos + (new Vector3(0.5f, 0.0f,0.0f));
-			trap.position = pos;
-		}
-		*/
+
 		float x = Input.GetAxisRaw("RightJoystickHorizontal")*0.8f;
 		
 		if( x < 0.2f  && x > -0.2f){
@@ -62,13 +52,7 @@ public class Trap : MonoBehaviour
 		pos = pos + (new Vector3(x, 0.0f,0.0f));
 		trap.position = pos;
 	
-		/*
-		float horizontal = Input.GetAxis("RightJoystickHorizontal");
-		float vert = Input.GetAxis("RightJoystickVertical");
-		Vector3 movement = new Vector3(horizontal, vert, 0.0f);
-		trap.position = trap.position + ((float) 0.2 * movement);
-		*/
-		
+
 		//looping behavior, +-1 added to accomodate width of player object
 		if (pos.x < minBound + 1) 
 		{
@@ -94,19 +78,9 @@ public class Trap : MonoBehaviour
 	void FixedUpdate()
 	{
 		
-		
-		//if (!isSet)
-		{
-			setPosition();
-		}
+		setPosition();
+		isSet = true;
 
-		//if (Input.GetButtonDown("CreateTrap") && temp_player.canSetTrap == false)
-		{
-			isSet = true;
-			//trap.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-			//StartCoroutine(TrapSetting());
-		}
-		
 
 		//if (isSet)
 		{
@@ -121,17 +95,11 @@ public class Trap : MonoBehaviour
 			if (trapTime < 0)
 			{
 				Destroy(gameObject);
+				PlayerController.canSetTrap = true;
 			}
 		}
 	}
 
-	IEnumerator TrapSetting()
-	{
-		yield return new WaitForSeconds(0.5f);
-		temp_player.canSetTrap = true;
-
-
-	}
 	public void Blink()
 	{
 		GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;

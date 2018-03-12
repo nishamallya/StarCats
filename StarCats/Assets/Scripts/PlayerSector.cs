@@ -30,7 +30,7 @@ public class PlayerSector : MonoBehaviour {
     public GameObject grenade;
 	
 	public GameObject sectortrap;
-	public bool canSetTrap;
+	public static bool canSetTrap;
 	
 	// Use this for initialization
 	void Start () {
@@ -81,6 +81,7 @@ public class PlayerSector : MonoBehaviour {
 			Instantiate(sectortrap,butt,Quaternion.identity);
 			//StartCoroutine(ActivateTrap());
 			TrapCounter.AddTrap(-1);
+			canSetTrap = false;
 		}
 		
 		float horizontal = Input.GetAxis(inputName); //"Horizontal");	

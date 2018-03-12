@@ -18,7 +18,7 @@ public class FlipEnemy2 : MonoBehaviour {
 		distance = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y, 2));
 	}
 	
-	void Update () {
+	void FixedUpdate () {
 		transform.position -= direction / distance * speed;
 
 		if (Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y, 2)) < 1.5f)

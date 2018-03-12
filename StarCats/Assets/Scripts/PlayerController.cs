@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 	public float thrust;
 	public Camera cam;
 	public GameObject trap;
-	public bool canSetTrap;
+	public static bool canSetTrap;
 	private static string inputName;
 	private static float initialSpeed;
 	private static float initialFireRate;
@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour {
 			Instantiate(trap,butt,Quaternion.identity);
 			//StartCoroutine(ActivateTrap());
 			TrapCounter.AddTrap(-1);
+			canSetTrap = false;
 		}
 		
 
