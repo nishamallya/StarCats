@@ -118,7 +118,7 @@ public class Spawner : MonoBehaviour {
 		for (int i = 0; i < 3; i++)
 		{
 			choice = Random.Range(0, 90);
-			toSpawn[choice] = speedUp;
+			toSpawn[choice] = planetA; //speedUp;
 		}
 		
 		for (int i = 0; i < 3; i++)
