@@ -32,7 +32,7 @@ public class PlayerRadial : MonoBehaviour
 	void Start () {
 		
 		rb = GetComponent<Rigidbody2D>();
-		initialSpeed = speed;
+		initialSpeed = 0.2f;
 		tiltAngle = 0f;
 		inputName = "Horizontal";
 		canSetTrap = true;
@@ -48,7 +48,7 @@ public class PlayerRadial : MonoBehaviour
 	{
 		slow.SetActive(false);
 		reverse.SetActive(false);
-		
+
 	}
 	
 	// Update is called once per frame
@@ -108,28 +108,27 @@ public class PlayerRadial : MonoBehaviour
 	
 	IEnumerator NormalInput()
 	{
-		//reverse.SetActive(true);
 		yield return new WaitForSeconds(5);
 		inputName = "Horizontal";
-		reverse.SetActive(false);
+		
 
 	}
 	
 	public static void FlipInput()
 	{
 		inputName = "FlippedHorizontal";
-
 	}
 	public static void SpeedUp()
 	{
 		speed = initialSpeed * 1.8f;
-		fireRate = 0.12f;
+		//fireRate = 0.12f;
 	}
 
 	public static void SlowDown()
 	{
 		speed = initialSpeed * 0.2f;
-		fireRate = initialFireRate;
+
+		
 	}
 
 	IEnumerator NormalSpeed()
@@ -137,8 +136,9 @@ public class PlayerRadial : MonoBehaviour
 		//slow.SetActive(true);
 		yield return new WaitForSeconds(5);
 		speed = initialSpeed;
-		fireRate = initialFireRate;
 		slow.SetActive(false);
+	
+
 	}
 
 	

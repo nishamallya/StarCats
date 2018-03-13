@@ -21,7 +21,7 @@ public class SpeedUp : MonoBehaviour {
 
 			Destroy(gameObject);
 			PlayerController.SpeedUp();
-			ReminderManager.SpeedBoost();
+			//ReminderManager.SpeedBoost();
 	
 		}
 
