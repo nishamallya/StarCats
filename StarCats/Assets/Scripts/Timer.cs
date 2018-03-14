@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
 	public GameObject PauseMenu;
 	public GameObject timerpanel;
 	public float countdowntime;
+
+    private string _pauseAxis;
 		
 	// Use this for initialization
 	internal void Start ()
@@ -25,6 +27,7 @@ public class Timer : MonoBehaviour
 		countdowntime = 3;
 		StartCoroutine(Pause());
 
+        GetPauseAxis();
 	}
 
 
@@ -58,7 +61,7 @@ public class Timer : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.GetButtonDown("Start") && timerpanel.activeSelf == false) 
+		if (Input.GetButtonDown(_pauseAxis) && timerpanel.activeSelf == false) 
 		{
 			if (PauseMenu.activeSelf)
 			{
@@ -112,9 +115,13 @@ public class Timer : MonoBehaviour
 		Time.timeScale = 1;
 	}
 
-	
-	
-		
-	
+    void GetPauseAxis()
+    {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) _pauseAxis = "Start";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) _pauseAxis = "WindowsPause";
+    }
+
+
+
 
 }
