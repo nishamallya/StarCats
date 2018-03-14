@@ -2695,7 +2695,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2116511063}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2906,7 +2906,7 @@ Prefab:
     - target: {fileID: 224611974978272350, guid: 4a21d139c0f2c4fa8a1538d57a54300f,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -249.94829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224611974978272350, guid: 4a21d139c0f2c4fa8a1538d57a54300f,
         type: 2}
@@ -3010,7 +3010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1968760331
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3325,7 +3325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2116511064
 MonoBehaviour:
   m_ObjectHideFlags: 0

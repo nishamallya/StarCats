@@ -10,6 +10,8 @@ public class RadialTrap : MonoBehaviour {
 
 	public bool isSet;
 	public PlayerRadial temp_player;
+
+    private string _moveAxis;
 	
 	public float trapTime;	
 	private bool isBlinking;
@@ -33,7 +35,7 @@ public class RadialTrap : MonoBehaviour {
 		trapTime = 10.0f;
 		isBlinking = false;
 
-
+        GetMoveAxis();
 	}
 
 	void setPosition()
@@ -42,7 +44,7 @@ public class RadialTrap : MonoBehaviour {
 		var pos = trap.position;
 
 		
-		float horizontal = Input.GetAxisRaw("RightJoystickHorizontal") * 0.8f;
+		float horizontal = Input.GetAxisRaw(_moveAxis) * 0.8f;
 		if( horizontal < 0.2f  && horizontal > -0.2f){
 			horizontal = 0.0f;
 		}
@@ -99,4 +101,9 @@ public class RadialTrap : MonoBehaviour {
 		GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;
 	}
 
+    void GetMoveAxis()
+    {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) _moveAxis = "RightJoystickHorizontal";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) _moveAxis = "TrapMovement";
+    }
 }

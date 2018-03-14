@@ -18,8 +18,10 @@ public class Trap : MonoBehaviour
 	public float trapTime;	
 	private bool isBlinking;
 
-	// Use this for initialization
-	void Start ()
+    private string _moveAxis;
+
+    // Use this for initialization
+    void Start ()
 	{
 		trap = GetComponent<Transform>();
 		startPos = trap.position;
@@ -35,15 +37,15 @@ public class Trap : MonoBehaviour
 		trapTime = 10.0f;
 		isBlinking = false;
 
-
-	}
+        GetMoveAxis();
+    }
 
 	void setPosition()
 	{
 		//movements
 		var pos = trap.position;
 
-		float x = Input.GetAxisRaw("RightJoystickHorizontal")*0.8f;
+		float x = Input.GetAxisRaw(_moveAxis)*0.8f;
 		
 		if( x < 0.2f  && x > -0.2f){
 			x = 0.0f;
@@ -107,5 +109,11 @@ public class Trap : MonoBehaviour
 
 	}
 
-	
+    void GetMoveAxis()
+    {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) _moveAxis = "RightJoystickHorizontal";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) _moveAxis = "TrapMovement";
+    }
+
+
 }

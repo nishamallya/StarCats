@@ -21,7 +21,11 @@ public class PlayerController : MonoBehaviour {
 	private static float initialSpeed;
 	private static float initialFireRate;
 
-	public static GameObject slow;
+    private string _fireAxis;
+    private string _nudeAxis;
+    private string _trapAxis;
+
+    public static GameObject slow;
 	public static GameObject reverse;
 
 	//bullet controller details
@@ -55,12 +59,16 @@ public class PlayerController : MonoBehaviour {
 		reverse = GameObject.FindGameObjectWithTag("ReverseEffect");
 		slow = GameObject.FindGameObjectWithTag("SlowEffect");
 		DeactivateEffects();
-		
-		
-		
+
+        GetFireAxis();
+        GetNudeAxis();
+        GetTrapAxis();
 
 
-	}
+
+
+
+    }
 
 	static void DeactivateEffects()
 	{
@@ -72,14 +80,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (Input.GetAxis("Trigger") > 0.9 && Time.fixedTime > nextFire)
+		if (Input.GetAxis(_fireAxis) > 0.9 && Time.fixedTime > nextFire)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 			
 		}
 		
-		if (Input.GetAxis("LeftTrigger") > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
+		if (Input.GetAxis(_nudeAxis) > 0.9 && Time.fixedTime > nextFire && GrenadeCounter.gCount > 0)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(grenade, shotSpawn.position, shotSpawn.rotation);
@@ -87,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 			
 		}
 		
-		if (Input.GetButtonDown("CreateTrap") && canSetTrap && TrapCounter.trapCount > 0)
+		if (Input.GetButtonDown(_trapAxis) && canSetTrap && TrapCounter.trapCount > 0)
 		{
 			Vector2 butt = new Vector2(0, 0);
 			Instantiate(trap,butt,Quaternion.identity);
@@ -206,4 +214,21 @@ public class PlayerController : MonoBehaviour {
 		slow.SetActive(false);
 	}
 
+    void GetFireAxis()
+    {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) _fireAxis = "Trigger";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) _fireAxis = "WindowsFire";
+    }
+
+    void GetNudeAxis()
+    {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) _nudeAxis = "LeftTrigger";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) _nudeAxis = "WindowsNude";
+    }
+
+    void GetTrapAxis()
+    {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) _trapAxis = "CreateTrap";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) _trapAxis = "WindowsTrap";
+    }
 }
