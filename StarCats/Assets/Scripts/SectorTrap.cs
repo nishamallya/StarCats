@@ -18,7 +18,9 @@ public class SectorTrap : MonoBehaviour {
 	private static float initialSpeed;
 	private Rigidbody2D rb;
 
-	private float maxX = 5.5f;
+    private string _moveAxis;
+
+    private float maxX = 5.5f;
 	private float minX = -5.5f;
 	
 	// Use this for initialization
@@ -36,8 +38,8 @@ public class SectorTrap : MonoBehaviour {
 		trapTime = 10.0f;
 		isBlinking = false;
 
-
-	}
+        GetMoveAxis();
+    }
 
 	void setPosition()
 	{
@@ -45,7 +47,7 @@ public class SectorTrap : MonoBehaviour {
 		var pos = trap.position;
 
 
-		float horizontal = Input.GetAxis("RightJoystickHorizontal")*2;
+		float horizontal = Input.GetAxis(_moveAxis)*2;
 		if (horizontal < 0.2f && horizontal > -0.2f)
 		{
 			horizontal = 0.0f;
@@ -98,5 +100,11 @@ public class SectorTrap : MonoBehaviour {
 
 
 	}
+
+    void GetMoveAxis()
+    {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) _moveAxis = "RightJoystickHorizontal";
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer) _moveAxis = "TrapMovement";
+    }
 
 }
