@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba04dd105aa74a9fabaa47ce6fe702b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 10
+  time: 60
   levelcomplete: {fileID: 571139661}
   PauseMenu: {fileID: 1847537331}
   timerpanel: {fileID: 138532380}
@@ -2284,7 +2284,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 47624544}
   m_HandleRect: {fileID: 0}

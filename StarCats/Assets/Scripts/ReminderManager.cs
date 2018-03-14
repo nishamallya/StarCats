@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ReminderManager : MonoBehaviour {
 
 	private static Text _reminder;
-	public static GameObject _multiplier;
+	//public static GameObject _multiplier;
 	
 	
 
@@ -15,7 +15,7 @@ public class ReminderManager : MonoBehaviour {
 	{
 		_reminder = GetComponent<Text>();
 		Text[] textobjects = FindObjectsOfType<Text>();
-		foreach (Text t in textobjects)
+		/*foreach (Text t in textobjects)
 		{
 			if (t.gameObject.CompareTag("MultiplierEffect"))
 			{
@@ -27,6 +27,7 @@ public class ReminderManager : MonoBehaviour {
 		{
 			_multiplier.SetActive(false);
 		}
+		*/
 
 
 
@@ -41,10 +42,13 @@ public class ReminderManager : MonoBehaviour {
 			StartCoroutine(ReminderDisappear());
 		}
 
-		if (_multiplier.gameObject.activeInHierarchy)
+		/*if (_multiplier.gameObject.activeInHierarchy)
 		{
 			StartCoroutine(MultiplierDisappear());
 		}
+		*/
+		
+		
 		
 		
 	}
@@ -74,12 +78,13 @@ public class ReminderManager : MonoBehaviour {
 		
 	}
 	
-	IEnumerator MultiplierDisappear()
+	/*IEnumerator MultiplierDisappear()
 	{
 		yield return new WaitForSeconds(5);
 		_multiplier.SetActive(false);
 		
 	}
+	*/
 	
 	
 	public static void HealthBoost()
@@ -101,7 +106,7 @@ public class ReminderManager : MonoBehaviour {
 	{
 		_reminder.text = "Score Multiplier!";
 		_reminder.gameObject.SetActive(true);
-		_multiplier.SetActive(true);
+		//_multiplier.SetActive(true);
 
 	}
 	
